@@ -1,0 +1,346 @@
+@import "tailwindcss";
+
+/* ============================================================
+   HACK@DAVIDSON — AROUND THE WORLD
+   Design system. Tournament-broadcast energy: bold flat color,
+   giant type, flag-stripe geometry, poster-world scenes.
+   ============================================================ */
+
+@theme inline {
+  --font-display: var(--font-display); /* Anton — hero + numerals */
+  --font-heading: var(--font-heading); /* Archivo — section titles */
+  --font-body: var(--font-body); /* Geist — copy + UI */
+
+  /* Global tournament palette */
+  --color-arena: #1533d6; /* royal tournament blue (EURO base) */
+  --color-arena-deep: #0a1a8c;
+  --color-cream: #f7f1e3;
+  --color-ink: #0b0f2b;
+
+  --color-hd-red: #e8322b;
+  --color-hd-gold: #ffcf3f;
+  --color-hd-pink: #ff2e88;
+  --color-hd-cyan: #22d3ee;
+  --color-hd-green: #16b45a;
+  --color-hd-purple: #6a2bd6;
+}
+
+:root {
+  --background: var(--color-arena);
+  --foreground: var(--color-cream);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-arena-deep);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---- Type helpers ---- */
+.font-display {
+  font-family: var(--font-display), Impact, sans-serif;
+  letter-spacing: 0.01em;
+}
+.font-heading {
+  font-family: var(--font-heading), system-ui, sans-serif;
+}
+
+.display-hero {
+  font-family: var(--font-display), Impact, sans-serif;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+/* Fluid title used across country sections */
+.section-title {
+  font-family: var(--font-display), Impact, sans-serif;
+  text-transform: uppercase;
+  line-height: 0.9;
+  font-size: clamp(2.6rem, 8vw, 6.5rem);
+  letter-spacing: 0.005em;
+}
+
+/* Body copy inside scenes */
+.scene-copy {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.55;
+  max-width: 46ch;
+}
+
+/* ---- Level label chip (game HUD feel) ---- */
+.level-chip {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+}
+.level-chip::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 0 4px color-mix(in srgb, currentColor 25%, transparent);
+}
+
+/* ---- Passport-stamp / ticket buttons ---- */
+.btn-stamp {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2.2rem;
+  border-radius: 999px;
+  border: 3px solid currentColor;
+  cursor: pointer;
+  position: relative;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+  transform: rotate(-2deg);
+}
+.btn-stamp:hover {
+  transform: rotate(-2deg) scale(1.04);
+}
+.btn-stamp:active {
+  transform: rotate(-2deg) scale(0.97);
+}
+
+/* Solid trophy-yellow primary */
+.btn-arena {
+  background: var(--color-hd-gold);
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.35);
+}
+.btn-arena:hover {
+  box-shadow: 9px 9px 0 rgba(0, 0, 0, 0.35);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-cream);
+  border-color: var(--color-cream);
+}
+
+/* ---- Poster cards ---- */
+.poster-card {
+  border-radius: 1.1rem;
+  border: 3px solid var(--color-ink);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fake stamp used on cards */
+.stamp-mark {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 2.5px solid currentColor;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.62rem;
+  transform: rotate(-8deg);
+  opacity: 0.85;
+}
+
+/* ============================================================
+   AMBIENT KEYFRAME ANIMATIONS
+   ============================================================ */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes drift-x {
+  from {
+    transform: translateX(-15%);
+  }
+  to {
+    transform: translateX(115%);
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-10%) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(40px) rotate(360deg);
+    opacity: 0.9;
+  }
+}
+@keyframes rain {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  80%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px currentColor);
+  }
+  20%,
+  22%,
+  55% {
+    opacity: 0.35;
+    filter: none;
+  }
+}
+@keyframes wave-paw {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(18deg);
+  }
+}
+@keyframes sun-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 24px rgba(255, 207, 63, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 54px rgba(255, 207, 63, 0.95));
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes streak {
+  0% {
+    transform: translateX(-40%) skewX(-12deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(150%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+@keyframes dash-march {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+@keyframes tick {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes travel {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Utility animation classes */
+.anim-spin-slow {
+  animation: spin-slow 60s linear infinite;
+}
+.anim-drift {
+  animation: drift-x 14s linear infinite;
+}
+.anim-flicker {
+  animation: flicker 4s infinite;
+}
+.anim-paw {
+  animation: wave-paw 1.4s ease-in-out infinite;
+  transform-origin: bottom right;
+}
+.anim-sun {
+  animation: sun-glow 5s ease-in-out infinite;
+}
+.anim-bob {
+  animation: bob 3.4s ease-in-out infinite;
+}
+.anim-dash {
+  animation: dash-march 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Thin scrollbar so the color doesn't fight the design */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-hd-gold);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-arena-deep);
+}
