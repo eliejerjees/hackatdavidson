@@ -7,8 +7,7 @@ const anton = Anton({
   variable: "--font-display",
   weight: "400",
   subsets: ["latin"],
-});
-
+})
 // Section headings — heavy grotesque, can go expanded/bold
 const archivo = Archivo({
   variable: "--font-heading",
