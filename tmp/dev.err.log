@@ -1,0 +1,1090 @@
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+  [90m8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m9 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  [90m1 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m"./components/Hero"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+  [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  [90m2 |[0m [36mimport[0m [33mNavigation[0m [36mfrom[0m [32m"./components/Navigation"[0m;
+  [90m3 |[0m [36mimport[0m [33mDestinationScene[0m [36mfrom[0m [32m"./components/DestinationScene"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mRouteTransition[0m [36mfrom[0m [32m"./components/RouteTransition"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mTracksSection[0m [36mfrom[0m [32m"./components/TracksSection"[0m;
+  [90m6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+  [90m 6 |[0m [36mimport[0m [33mEventInfo[0m [36mfrom[0m [32m"./components/EventInfo"[0m;
+  [90m 7 |[0m [36mimport[0m [33mDavidsonSection[0m [36mfrom[0m [32m"./components/DavidsonSection"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { destinations } [36mfrom[0m [32m"./data/destinations"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m11 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./app/page.tsx:3:1
+Module not found: Can't resolve './components/DestinationScene'
+  1 | import Hero from "./components/Hero";
+  2 | import Navigation from "./components/Navigation";
+> 3 | import DestinationScene from "./components/DestinationScene";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import RouteTransition from "./components/RouteTransition";
+  5 | import TracksSection from "./components/TracksSection";
+  6 | import EventInfo from "./components/EventInfo";
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:6:1
+Module not found: Can't resolve './components/EventInfo'
+  4 | import RouteTransition from "./components/RouteTransition";
+  5 | import TracksSection from "./components/TracksSection";
+> 6 | import EventInfo from "./components/EventInfo";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import DavidsonSection from "./components/DavidsonSection";
+  8 | import { destinations } from "./data/destinations";
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:2:1
+Module not found: Can't resolve './components/Navigation'
+  1 | import Hero from "./components/Hero";
+> 2 | import Navigation from "./components/Navigation";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import DestinationScene from "./components/DestinationScene";
+  4 | import RouteTransition from "./components/RouteTransition";
+  5 | import TracksSection from "./components/TracksSection";
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:4:1
+Module not found: Can't resolve './components/RouteTransition'
+  2 | import Navigation from "./components/Navigation";
+  3 | import DestinationScene from "./components/DestinationScene";
+> 4 | import RouteTransition from "./components/RouteTransition";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import TracksSection from "./components/TracksSection";
+  6 | import EventInfo from "./components/EventInfo";
+  7 | import DavidsonSection from "./components/DavidsonSection";
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:8:1
+Module not found: Can't resolve './data/destinations'
+   6 | import EventInfo from "./components/EventInfo";
+   7 | import DavidsonSection from "./components/DavidsonSection";
+>  8 | import { destinations } from "./data/destinations";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function Home() {
+  11 |   return (
+
+https://nextjs.org/docs/messages/module-not-found 
