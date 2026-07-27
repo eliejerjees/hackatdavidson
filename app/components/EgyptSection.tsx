@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import Reveal from "./Reveal";
 import CountryBadge from "./CountryBadge";
@@ -11,16 +10,13 @@ function rng(s: number) {
 }
 
 function SandDrift() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
   const grains = Array.from({ length: 22 }, (_, i) => ({
     i,
-    top: 40 + rng(i + 1) * 55,
-    delay: rng(i + 3) * 8,
-    dur: 6 + rng(i + 6) * 8,
-    w: 30 + rng(i + 2) * 90,
+    top: Math.round((40 + rng(i + 1) * 55) * 10) / 10,
+    delay: Math.round(rng(i + 3) * 80) / 10,
+    dur: Math.round((6 + rng(i + 6) * 8) * 10) / 10,
+    w: Math.round(30 + rng(i + 2) * 90),
   }));
-  if (!mounted) return null;
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       {grains.map((g) => (
@@ -111,7 +107,7 @@ function EgyptScene() {
           const isCode = i % 5 === 3;
           const x = 24 + i * 49;
           return isCode ? (
-            <text key={i} x={x} y="24" fontFamily="var(--font-heading)" fontWeight="900" fontSize="16" fill="#ffcf3f">
+            <text key={i} x={x} y="24" fontFamily="var(--font-archivo)" fontWeight="900" fontSize="16" fill="#ffcf3f">
               {["</>", "{ }", "()", "=>"][i % 4]}
             </text>
           ) : (

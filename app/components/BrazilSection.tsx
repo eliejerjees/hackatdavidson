@@ -111,7 +111,7 @@ export default function BrazilSection() {
               flag="circle-flags:br"
               city="Rio de Janeiro"
               native="Brasil"
-              coords="22.9°S · 43.2°W — LEVEL 04"
+              coords="22.9°S · 43.2°W — LEVEL 06"
             />
             <span className="level-chip text-hd-gold">Find Your Squad</span>
           </div>

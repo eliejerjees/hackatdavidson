@@ -1,24 +1,17 @@
 import type { Metadata } from "next";
-import { Anton, Archivo, Geist } from "next/font/google";
+import { Archivo, Geist } from "next/font/google";
 import "./globals.css";
-
-// Big, sporty display face for hero + giant numerals (World Cup / EURO energy)
-const anton = Anton({
-  variable: "--font-display",
-  weight: "400",
-  subsets: ["latin"],
-});
 
 // Section headings — heavy grotesque, can go expanded/bold
 const archivo = Archivo({
-  variable: "--font-heading",
+  variable: "--font-archivo",
   weight: ["600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
 // Clean body / UI type
 const geist = Geist({
-  variable: "--font-body",
+  variable: "--font-geist",
   subsets: ["latin"],
 });
 
@@ -36,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${anton.variable} ${archivo.variable} ${geist.variable} antialiased`}
+      className={`${archivo.variable} ${geist.variable} antialiased`}
     >
       <body>{children}</body>
     </html>

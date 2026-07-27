@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import Reveal from "./Reveal";
 import CountryBadge from "./CountryBadge";
@@ -14,20 +13,17 @@ function rng(s: number) {
 const CODE_BITS = ["{ }", "</>", "( )", "=>", "[ ]", "&&"];
 
 function Rain() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
   const drops = Array.from({ length: 40 }, (_, i) => {
     const isCode = i % 6 === 0;
     return {
       i,
-      left: rng(i + 1) * 100,
-      delay: rng(i + 5) * 4,
-      dur: 1.6 + rng(i + 9) * 1.8,
+      left: Math.round(rng(i + 1) * 1000) / 10,
+      delay: Math.round(rng(i + 5) * 40) / 10,
+      dur: Math.round((1.6 + rng(i + 9) * 1.8) * 10) / 10,
       isCode,
       bit: CODE_BITS[Math.floor(rng(i + 2) * CODE_BITS.length)],
     };
   });
-  if (!mounted) return null;
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       {drops.map((d) =>

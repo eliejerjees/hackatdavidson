@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import Reveal from "./Reveal";
 import CountryBadge from "./CountryBadge";
@@ -11,16 +10,13 @@ function rng(s: number) {
 }
 
 function Blossoms() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
   const petals = Array.from({ length: 26 }, (_, i) => ({
     i,
-    left: rng(i + 1) * 100,
-    delay: rng(i + 4) * 9,
-    dur: 7 + rng(i + 8) * 8,
-    size: 8 + rng(i + 2) * 8,
+    left: Math.round(rng(i + 1) * 1000) / 10,
+    delay: Math.round(rng(i + 4) * 90) / 10,
+    dur: Math.round((7 + rng(i + 8) * 8) * 10) / 10,
+    size: Math.round((8 + rng(i + 2) * 8) * 10) / 10,
   }));
-  if (!mounted) return null;
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       {petals.map((p) => (

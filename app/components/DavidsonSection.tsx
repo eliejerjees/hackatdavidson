@@ -20,7 +20,7 @@ function ChambersScene() {
   return (
     <svg
       viewBox="0 0 1200 460"
-      className="absolute inset-x-0 bottom-0 h-[58%] w-full"
+      className="absolute inset-x-0 bottom-0 h-[38%] w-full sm:h-[58%]"
       preserveAspectRatio="xMidYMax slice"
       aria-hidden
     >
@@ -73,7 +73,7 @@ function ChambersScene() {
       <g transform="translate(600 90)">
         <path d="M0,0 C-26,0 -34,30 0,70 C34,30 26,0 0,0 Z" fill="#ffcf3f" stroke="#0b0f2b" strokeWidth="3" />
         <circle cx="0" cy="24" r="12" fill="#0b0f2b" />
-        <text x="0" y="29" textAnchor="middle" fontFamily="var(--font-display), Impact" fontSize="16" fill="#ffcf3f">
+        <text x="0" y="29" textAnchor="middle" fontFamily="var(--font-archivo), system-ui" fontSize="16" fill="#ffcf3f">
           D
         </text>
       </g>
@@ -85,12 +85,12 @@ export default function DavidsonSection() {
   return (
     <section
       id="davidson"
-      className="relative flex min-h-[100svh] flex-col overflow-hidden"
+      className="relative flex min-h-[112svh] flex-col overflow-hidden sm:min-h-[100svh]"
       style={{ background: "linear-gradient(to bottom, #7a1225 0%, #a6192e 45%, #c8102e 100%)" }}
     >
       <Confetti count={26} />
 
-      <div className="relative z-20 mx-auto w-full max-w-5xl px-6 pt-24 text-center sm:pt-28">
+      <div className="relative z-20 mx-auto w-full max-w-5xl px-6 pb-[34svh] pt-24 text-center sm:pb-0 sm:pt-28">
         <Reveal>
           <span className="level-chip mx-auto text-hd-gold">Final Level · Davidson</span>
         </Reveal>
@@ -110,7 +110,7 @@ export default function DavidsonSection() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <div className="relative z-30 mt-7 flex flex-wrap items-center justify-center gap-4 sm:mt-9">
             <a href="#" className="btn-stamp btn-arena">
               <Icon icon="fluent-emoji-flat:trophy" className="h-6 w-6" /> Register
             </a>
@@ -129,7 +129,7 @@ export default function DavidsonSection() {
       {/* landed flag pins around campus */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-10">
         {LANDED.map((f) => (
-          <div key={f.flag} className={`anim-bob absolute ${f.pos}`}>
+          <div key={f.flag} className={`anim-bob absolute hidden sm:block ${f.pos}`}>
             <Icon icon={f.flag} className="h-9 w-9 rounded-full border-[2.5px] border-cream shadow-[0_4px_0_rgba(0,0,0,0.3)]" />
           </div>
         ))}

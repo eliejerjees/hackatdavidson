@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { Icon } from "@iconify/react";
 import Globe from "./Globe";
 import StadiumBowl from "./StadiumBowl";
 import Confetti from "./Confetti";
@@ -63,11 +64,27 @@ export default function Hero() {
       <Confetti count={30} />
 
       {/* Top bar */}
-      <header className="relative z-20 flex w-full max-w-7xl items-center justify-between px-6 pt-6">
+      <header className="relative z-40 flex w-full max-w-7xl items-center justify-between gap-4 px-6 pt-6">
         <span className="font-heading text-sm font-black uppercase tracking-[0.2em] text-cream">
           Hack<span className="text-hd-gold">@</span>Davidson
         </span>
-        <span className="hidden font-heading text-xs font-bold uppercase tracking-[0.28em] text-cream/70 sm:block">
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-1 rounded-full border border-cream/20 bg-ink/25 p-1 font-heading text-[0.64rem] font-black uppercase tracking-[0.16em] text-cream/80 backdrop-blur-md md:flex"
+        >
+          {[
+            ["About", "#england"],
+            ["Schedule", "#japan"],
+            ["Tracks", "#tracks"],
+            ["FAQ", "#tracks"],
+            ["Register", "#davidson"],
+          ].map(([label, href]) => (
+            <a key={label} href={href} className="rounded-full px-3 py-2 transition-colors hover:bg-cream/15 hover:text-cream">
+              {label}
+            </a>
+          ))}
+        </nav>
+        <span className="hidden font-heading text-xs font-bold uppercase tracking-[0.28em] text-cream/70 lg:block">
           Around the World · 2027
         </span>
       </header>
@@ -98,10 +115,10 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a href="#england" className="btn-stamp btn-arena">
-            ⚽ Enter the Arena
+            <Icon icon="mdi:soccer" className="h-5 w-5" /> Enter the Arena
           </a>
           <a href="#tracks" className="btn-stamp btn-ghost">
-            View the Bracket
+            <Icon icon="mdi:tournament" className="h-5 w-5" /> View the Bracket
           </a>
         </div>
       </motion.div>

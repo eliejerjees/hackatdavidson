@@ -63,7 +63,7 @@ export default function TracksSection() {
               </span>
             </div>
             <div className="divide-y divide-cream/10">
-              {TRACKS.map((tr, i) => (
+              {TRACKS.map((tr) => (
                 <div
                   key={tr.t}
                   className="group flex items-center gap-4 px-5 py-3.5 transition-colors hover:bg-white/5"

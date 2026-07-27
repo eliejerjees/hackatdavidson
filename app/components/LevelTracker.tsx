@@ -7,8 +7,10 @@ const LEVELS = [
   { id: "england", label: "Lv 01", tag: "Kickoff" },
   { id: "japan", label: "Lv 02", tag: "Training" },
   { id: "egypt", label: "Lv 03", tag: "Underdog" },
-  { id: "brazil", label: "Lv 04", tag: "Squad" },
-  { id: "tracks", label: "Lv 05", tag: "World Map" },
+  { id: "lagos", label: "Lv 04", tag: "Energy" },
+  { id: "india", label: "Lv 05", tag: "Motion" },
+  { id: "brazil", label: "Lv 06", tag: "Squad" },
+  { id: "tracks", label: "Map", tag: "Routes" },
   { id: "davidson", label: "Final", tag: "Davidson" },
 ];
 

@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-// Pseudo-random scatter, computed client-side only (Math.sin can differ in the
-// last bits between the Node server and browser V8, so we skip SSR for the
-// purely decorative particle layer to avoid hydration mismatches).
+// Pseudo-random scatter with rounded values so the decorative layer is stable
+// between server render and hydration.
 function rng(seed: number) {
   const x = Math.sin(seed * 99.13) * 43758.5453;
   return x - Math.floor(x);
@@ -20,15 +17,11 @@ const COLORS = [
 ];
 
 export default function Confetti({ count = 34 }: { count?: number }) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
-
   const pieces = Array.from({ length: count }, (_, i) => {
-    const left = rng(i + 1) * 100;
-    const delay = rng(i + 7) * 8;
-    const duration = 6 + rng(i + 13) * 7;
-    const size = 6 + rng(i + 21) * 8;
+    const left = Math.round(rng(i + 1) * 1000) / 10;
+    const delay = Math.round(rng(i + 7) * 80) / 10;
+    const duration = Math.round((6 + rng(i + 13) * 7) * 10) / 10;
+    const size = Math.round((6 + rng(i + 21) * 8) * 10) / 10;
     const color = COLORS[Math.floor(rng(i + 3) * COLORS.length)];
     const round = rng(i + 5) > 0.5;
     return { left, delay, duration, size, color, round, i };
