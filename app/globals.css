@@ -467,6 +467,11 @@ button:focus-visible {
   color: #f7f1e3;
 }
 
+.editorial-site.intro-active {
+  height: 100svh;
+  overflow: hidden;
+}
+
 .editorial-hero,
 .editorial-chapter,
 .route-map-section,
@@ -494,6 +499,16 @@ button:focus-visible {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-shadow: 0 1px 1rem rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateX(-50%) translateY(-0.5rem);
+}
+
+.intro-complete .editorial-nav {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }
 
 .editorial-nav div {
@@ -545,16 +560,27 @@ button:focus-visible {
 
 .matchday-field img {
   object-fit: cover;
-  object-position: center 58%;
+  object-position: center 52%;
+  filter: brightness(0.96) contrast(1.04) saturate(1.03);
+  transform: scale(1.04) translateY(10%);
 }
 
 .field-grade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(8, 18, 69, 0.3), transparent 34%, transparent 66%, rgba(8, 18, 69, 0.3)),
-    linear-gradient(to bottom, rgba(9, 13, 42, 0.16), transparent 48%, rgba(7, 14, 33, 0.2));
-  mix-blend-mode: multiply;
+    radial-gradient(circle at 72% 72%, rgba(255, 244, 215, 0.12), transparent 22%),
+    linear-gradient(90deg, rgba(4, 7, 18, 0.68), transparent 38%, transparent 68%, rgba(4, 7, 18, 0.36)),
+    linear-gradient(to bottom, rgba(5, 8, 18, 0.22), transparent 48%, rgba(3, 5, 12, 0.18));
+  transition: opacity 1.4s ease;
+}
+
+.intro-active .field-grade {
+  opacity: 0.72;
+}
+
+.intro-started .field-grade {
+  opacity: 1;
 }
 
 .player-tunnel {
@@ -679,6 +705,12 @@ button:focus-visible {
   inset: 18% 22% 18%;
   z-index: 5;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease 1.2s;
+}
+
+.intro-started .matchday-confetti {
+  opacity: 1;
 }
 
 .matchday-confetti span {
@@ -713,9 +745,13 @@ button:focus-visible {
   to { translate: 0 10px; }
 }
 
-.hero-title {
+.hero-copy-reveal {
   position: relative;
   z-index: 8;
+}
+
+.hero-title {
+  position: relative;
   margin-top: -2svh;
   width: min(64vw, 48rem);
   text-align: center;
@@ -800,6 +836,16 @@ button:focus-visible {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.intro-complete .hero-scroll-cue {
+  opacity: 1;
+}
+
+.intro-active .hero-title a {
+  pointer-events: none;
 }
 
 .hero-scroll-cue span {
@@ -813,6 +859,15 @@ button:focus-visible {
 @keyframes tunnel-cue {
   0%, 100% { transform: scaleX(0.45); opacity: 0.4; }
   50% { transform: scaleX(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-nav,
+  .field-grade,
+  .matchday-confetti,
+  .hero-scroll-cue {
+    transition: none;
+  }
 }
 
 .editorial-chapter {
@@ -1197,7 +1252,8 @@ button:focus-visible {
   }
 
   .matchday-field img {
-    object-position: 50% 55%;
+    object-position: center 52%;
+    transform: scale(1.05) translateY(9%);
   }
 
   .tunnel-ceiling {

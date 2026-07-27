@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const chapters = [
   {
@@ -192,6 +192,9 @@ function Finale() {
 
 export default function EditorialJourney() {
   const heroRef = useRef<HTMLElement>(null);
+  const shouldReduceMotion = useReducedMotion();
+  const [introStarted, setIntroStarted] = useState(false);
+  const [introComplete, setIntroComplete] = useState(false);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const fieldScale = useTransform(scrollYProgress, [0, 1], [1.03, 1.14]);
   const fieldY = useTransform(scrollYProgress, [0, 1], [0, -36]);
@@ -199,8 +202,42 @@ export default function EditorialJourney() {
   const heroCopyY = useTransform(scrollYProgress, [0, 1], [0, -64]);
   const heroCopyOpacity = useTransform(scrollYProgress, [0, 0.72], [1, 0]);
 
+  useEffect(() => {
+    const skipIntro = shouldReduceMotion || window.location.hash !== "" || window.scrollY > 4;
+
+    if (skipIntro) {
+      const skipFrame = window.requestAnimationFrame(() => {
+        setIntroStarted(true);
+        setIntroComplete(true);
+      });
+      return () => window.cancelAnimationFrame(skipFrame);
+    }
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
+    const startFrame = window.requestAnimationFrame(() => setIntroStarted(true));
+    const releaseTimer = window.setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      setIntroComplete(true);
+    }, 2400);
+
+    return () => {
+      window.cancelAnimationFrame(startFrame);
+      window.clearTimeout(releaseTimer);
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+    };
+  }, [shouldReduceMotion]);
+
   return (
-    <main className="editorial-site">
+    <main
+      className={`editorial-site ${introStarted ? "intro-started" : ""} ${introComplete ? "intro-complete" : "intro-active"}`}
+    >
       <section id="hero" ref={heroRef} className="editorial-hero">
         <nav className="editorial-nav" aria-label="Primary">
           <a href="#hero">Hack@Davidson</a>
@@ -216,7 +253,7 @@ export default function EditorialJourney() {
           aria-hidden
         >
           <Image
-            src="/assets/public-domain/football-field-night.jpg"
+            src="/assets/licensed/davidson-walkout-hero.png"
             alt=""
             fill
             priority
@@ -235,12 +272,22 @@ export default function EditorialJourney() {
               <span />
             </div>
           </div>
-          <div className="tunnel-wall tunnel-wall-left">
+          <motion.div
+            initial={false}
+            animate={{ x: introStarted ? 0 : "34vw" }}
+            transition={{ duration: shouldReduceMotion ? 0 : 1.65, ease: [0.76, 0, 0.24, 1] }}
+            className="tunnel-wall tunnel-wall-left"
+          >
             <div className="team-bands" />
-          </div>
-          <div className="tunnel-wall tunnel-wall-right">
+          </motion.div>
+          <motion.div
+            initial={false}
+            animate={{ x: introStarted ? 0 : "-34vw" }}
+            transition={{ duration: shouldReduceMotion ? 0 : 1.65, ease: [0.76, 0, 0.24, 1] }}
+            className="tunnel-wall tunnel-wall-right"
+          >
             <div className="team-bands" />
-          </div>
+          </motion.div>
           <div className="tunnel-floor">
             <span className="touchline" />
           </div>
@@ -253,17 +300,28 @@ export default function EditorialJourney() {
         </div>
 
         <motion.div
-          style={{ y: heroCopyY, opacity: heroCopyOpacity }}
-          className="hero-title"
+          initial={false}
+          animate={{ opacity: introStarted ? 1 : 0, y: introStarted ? 0 : 24 }}
+          transition={{
+            duration: shouldReduceMotion ? 0 : 0.75,
+            delay: introComplete || shouldReduceMotion ? 0 : 1.05,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="hero-copy-reveal"
         >
-          <p>Hack@Davidson 2027</p>
-          <h1>Welcome<br />to the Cup.</h1>
-          <div className="hero-match-info">
-            <span>Davidson, NC</span>
-            <i />
-            <span>Spring 2027</span>
-          </div>
-          <a href="#london">Enter the Pitch</a>
+          <motion.div
+            style={{ y: heroCopyY, opacity: heroCopyOpacity }}
+            className="hero-title"
+          >
+            <p>Hack@Davidson 2027</p>
+            <h1>Welcome<br />to the Cup.</h1>
+            <div className="hero-match-info">
+              <span>Davidson, NC</span>
+              <i />
+              <span>Spring 2027</span>
+            </div>
+            <a href="#london">Enter the Pitch</a>
+          </motion.div>
         </motion.div>
 
         <div className="hero-scroll-cue" aria-hidden>

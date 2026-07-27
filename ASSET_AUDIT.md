@@ -10,7 +10,8 @@ The new rule is: one chapter, one dominant image language, one message. Supporti
 
 | File | Source | License | Usage |
 | --- | --- | --- | --- |
-| `public/assets/public-domain/football-field-night.jpg` | Wikimedia Commons, `Pexels-jonathan-petersson-399187.jpg`, by Jonathan Petersson | CC0 1.0 Public Domain Dedication | Hero field and floodlights, color-treated and framed by the CSS player tunnel. |
+| `public/assets/licensed/davidson-walkout-hero.png` | AI-assisted edit based on the user-supplied walkout reference | Project-specific derivative asset | Primary hero image, recolored with a subtle Davidson kit and matched to the site palette behind the animated player-tunnel walls. |
+| `public/assets/public-domain/football-field-night.jpg` | Wikimedia Commons, `Pexels-jonathan-petersson-399187.jpg`, by Jonathan Petersson | CC0 1.0 Public Domain Dedication | Previous hero field image, retained locally but no longer rendered. |
 | `public/assets/public-domain/big-ben.svg` | Wikimedia Commons, `World landmarks icons - Big Ben.svg` | CC0 1.0 Public Domain Dedication | Large London silhouette, used as an atmospheric chapter asset. |
 | `public/assets/public-domain/christ-and-liberty.svg` | Wikimedia Commons, `Christ and Liberty.svg` | Wikimedia-hosted SVG; used only as a faint compositional silhouette layer | Subtle Rio atmospheric layer, not a primary literal illustration. |
 
