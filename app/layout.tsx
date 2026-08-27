@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Archivo, Geist } from "next/font/google";
+import {
+  Archivo,
+  Geist,
+  Geist_Mono,
+  Inter,
+  Libre_Caslon_Text,
+} from "next/font/google";
 import "./globals.css";
 
 // Section headings — heavy grotesque, can go expanded/bold
@@ -9,16 +15,36 @@ const archivo = Archivo({
   subsets: ["latin"],
 });
 
-// Clean body / UI type
+// Clean body / UI type (themed hackathon site)
 const geist = Geist({
   variable: "--font-geist",
   subsets: ["latin"],
 });
 
+// Drafting-sheet annotations on the umbrella site
+const geistMono = Geist_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
+
+// Davidson's official serif — headings on the umbrella site
+const caslon = Libre_Caslon_Text({
+  variable: "--font-caslon",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+
+// Davidson's official sans — body copy on the umbrella site
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Hack@Davidson — Around the World",
+  title: "Hack@Davidson — Davidson College's student tech community",
   description:
-    "Davidson's student-run hackathon. Build Locally. Think Globally. One weekend, a whole world of ideas.",
+    "Hack@Davidson is a student-run organization at Davidson College building a community of makers across every major. We run Davidson's annual hackathon, workshops, build nights, and tech talks.",
 };
 
 export default function RootLayout({
@@ -29,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${geist.variable} antialiased`}
+      className={`${archivo.variable} ${geist.variable} ${caslon.variable} ${inter.variable} ${geistMono.variable} antialiased`}
     >
       <body>{children}</body>
     </html>

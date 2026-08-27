@@ -23,6 +23,23 @@
   --color-hd-cyan: #22d3ee;
   --color-hd-green: #16b45a;
   --color-hd-purple: #6a2bd6;
+
+  /* ---- Davidson College official palette (marketing toolbox) ----
+     Used by the umbrella org site at hackatdavidson.com. */
+  --color-dc-red: #d42121;
+  --color-dc-black: #0f1012;
+  --color-dc-sandstone: #e9ded3;
+  --color-dc-taupe: #9f8b76;
+  --color-dc-lake: #294878;
+  --color-dc-gray-1: #f9f5f2;
+  --color-dc-gray-3: #d4cfce;
+  --color-dc-gray-6: #b0abab;
+  --color-dc-gray-8: #8d898a;
+  --color-dc-gray-10: #6a6869;
+  --color-dc-gray-12: #4a484a;
+
+  --font-serif: var(--font-caslon); /* Libre Caslon Text — Davidson serif */
+  --font-sans: var(--font-inter); /* Inter — Davidson sans */
 }
 
 :root {
@@ -38,12 +55,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* overflow-x: clip (not hidden) — hidden on <body> turns it into the scroll
+   container, which breaks window scrolling, sticky, and anchor jumps. */
+html {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
+  background: #ffffff;
+  color: var(--color-dc-black);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+/* The themed hackathon page (/2027) keeps the tournament palette. */
+body:has(.theme-worldtour) {
   background: var(--color-arena-deep);
   color: var(--foreground);
   font-family: var(--font-geist), system-ui, sans-serif;
-  overflow-x: hidden;
 }
 
 a,
@@ -444,15 +474,17 @@ button:focus-visible {
   }
 }
 
-/* Thin scrollbar so the color doesn't fight the design */
-::-webkit-scrollbar {
+/* Thin scrollbar so the color doesn't fight the design.
+   Scoped to the themed page — unscoped, it leaked gold-on-navy into any
+   scrollable element on the umbrella site too. */
+html:has(.theme-worldtour)::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-thumb {
+html:has(.theme-worldtour)::-webkit-scrollbar-thumb {
   background: var(--color-hd-gold);
   border-radius: 999px;
 }
-::-webkit-scrollbar-track {
+html:has(.theme-worldtour)::-webkit-scrollbar-track {
   background: var(--color-arena-deep);
 }
 
@@ -1343,5 +1375,283 @@ button:focus-visible {
   .chambers-poster {
     bottom: 2svh;
     height: 11rem;
+  }
+}
+
+/* ============================================================
+   UMBRELLA ORG SITE — hackatdavidson.com
+   No theme. Editorial, institutional, sponsor-facing.
+   Palette is Davidson College's official marketing palette.
+   ============================================================ */
+
+.site-general {
+  /* Red + white carry the page. Blue and green keep it lively. */
+  --g-bg: #ffffff;
+  --g-bg-alt: #f4f6f9; /* cool light, not dusty warm */
+  --g-ink: #101216;
+  --g-muted: #565d68; /* cool gray, AA on white */
+  --g-rule: #e4e8ee;
+
+  --g-red: #d42121;
+  --g-red-deep: #a5171c;
+  --g-blue: #1e4fd8;
+  --g-blue-soft: #eaf0ff;
+  --g-green: #12a06a;
+  --g-green-soft: #e6f7ef;
+  --g-red-soft: #fdecec;
+
+  /* Sandstone survives only for the hero's @ and its contour lines. */
+  --g-sand: #e9ded3;
+
+  /* Nothing on this page has a hard corner. */
+  --g-r-xl: 34px;
+  --g-r-lg: 24px;
+  --g-r-md: 16px;
+  --g-r-sm: 10px;
+
+  background: var(--g-bg);
+  color: var(--g-ink);
+  font-family: var(--font-inter), Helvetica, system-ui, sans-serif;
+}
+
+.site-general a:focus-visible,
+.site-general button:focus-visible {
+  outline: 3px solid var(--g-red);
+  outline-offset: 3px;
+}
+
+/* ---- Type ---- */
+.g-serif {
+  font-family: var(--font-caslon), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Eyebrow / kicker labels */
+.g-label {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.g-h1 {
+  font-family: var(--font-caslon), Georgia, serif;
+  font-size: clamp(2.6rem, 6.4vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.g-h2 {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.g-h3 {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.g-lead {
+  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--g-muted);
+}
+
+/* ---- Buttons ---- */
+.g-btn {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.7rem;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+.g-btn:hover {
+  transform: translateY(-2px);
+}
+
+.g-btn-solid {
+  background: var(--g-red);
+  color: #fff;
+  border-color: var(--g-red);
+}
+.g-btn-solid:hover {
+  background: #b21b1b;
+  border-color: #b21b1b;
+}
+
+.g-btn-outline {
+  background: transparent;
+  color: var(--g-ink);
+  border-color: var(--g-ink);
+}
+.g-btn-outline:hover {
+  background: var(--g-ink);
+  color: #fff;
+}
+
+.g-btn-invert {
+  background: #fff;
+  color: var(--g-ink);
+  border-color: #fff;
+}
+
+/* ---- Placeholder image frames ----
+   Every .g-frame is a slot waiting on a real photo. */
+.g-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 1.5px dashed #c3cad6;
+  border-radius: var(--g-r-md);
+  color: #8b95a5;
+  background-color: var(--g-bg-alt);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 11px,
+    rgba(120, 134, 158, 0.09) 11px 22px
+  );
+  overflow: hidden;
+}
+
+.g-frame-dark {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.04);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 11px,
+    rgba(255, 255, 255, 0.05) 11px 22px
+  );
+}
+
+.g-frame-note {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.6rem;
+  line-height: 1.5;
+}
+
+/* ---- Colour grounds ---- */
+.g-ground-red {
+  background: var(--g-red);
+  color: #fff;
+}
+.g-ground-blue {
+  background: var(--g-blue);
+  color: #fff;
+}
+.g-ground-green {
+  background: var(--g-green);
+  color: #fff;
+}
+.g-ground-cool {
+  background: var(--g-bg-alt);
+}
+.g-ground-ink {
+  background: var(--g-ink);
+  color: #fff;
+}
+
+/* ---- Soft cards ---- */
+.g-tile {
+  border-radius: var(--g-r-lg);
+  transition:
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.22s ease;
+}
+.g-tile-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 44px -26px rgba(16, 18, 22, 0.38);
+}
+
+.g-pill {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---- Drafting-sheet annotations (hero) ---- */
+.g-mono {
+  font-family: var(--font-mono), ui-monospace, "SF Mono", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ============================================================
+   Scrollbar — red track, white thumb.
+   Scoped with :has() so the themed /2027 page keeps its own.
+
+   Do NOT add scrollbar-color/scrollbar-width to this rule: when the
+   standard properties are present, Chrome ignores ::-webkit-scrollbar
+   entirely and draws a trackless overlay bar — which on macOS meant a
+   white thumb floating on the white page with no red track at all.
+   The webkit pseudo-elements alone also force a classic, always-visible
+   scrollbar instead of the macOS overlay one.
+   ============================================================ */
+html:has(.site-general)::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+html:has(.site-general)::-webkit-scrollbar-track {
+  background: #d42121;
+}
+
+html:has(.site-general)::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 999px;
+  /* inset so the red track shows on both sides of the thumb */
+  border: 3px solid #d42121;
+}
+
+html:has(.site-general)::-webkit-scrollbar-thumb:hover {
+  background: #f0f0f0;
+}
+
+html:has(.site-general)::-webkit-scrollbar-corner {
+  background: #d42121;
+}
+
+/* Firefox has no ::-webkit-scrollbar, so it gets the standard properties.
+   The feature query keeps them away from Chrome. */
+@supports not selector(::-webkit-scrollbar) {
+  html:has(.site-general) {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff #d42121; /* thumb, track */
   }
 }
