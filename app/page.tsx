@@ -10,7 +10,7 @@ import Contact from "./components/general/Contact";
 import SiteFooter from "./components/general/SiteFooter";
 
 // hackatdavidson.com — the umbrella organization site. Deliberately unthemed;
-// the themed event site lives at /2027 (later 2027.hackatdavidson.com).
+// the themed event site lives in its own repo, at 2027.hackatdavidson.com.
 export default function Home() {
   return (
     <div className="site-general" id="top">

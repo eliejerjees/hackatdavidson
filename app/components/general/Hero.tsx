@@ -148,7 +148,7 @@ export default function Hero() {
             </a>
           ))}
           <Link
-            href="/2027"
+            href="https://2027.hackatdavidson.com"
             className="text-[0.95rem] font-semibold text-white underline decoration-2 underline-offset-[6px]"
           >
             2027

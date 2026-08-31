@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
   Archivo,
-  Geist,
   Geist_Mono,
   Inter,
   Libre_Caslon_Text,
@@ -12,12 +11,6 @@ import "./globals.css";
 const archivo = Archivo({
   variable: "--font-archivo",
   weight: ["600", "700", "800", "900"],
-  subsets: ["latin"],
-});
-
-// Clean body / UI type (themed hackathon site)
-const geist = Geist({
-  variable: "--font-geist",
   subsets: ["latin"],
 });
 
@@ -55,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${geist.variable} ${caslon.variable} ${inter.variable} ${geistMono.variable} antialiased`}
+      className={`${archivo.variable} ${caslon.variable} ${inter.variable} ${geistMono.variable} antialiased`}
     >
       {/* suppressHydrationWarning: browser extensions (Grammarly, etc.)
           inject attributes onto <body> after the SSR'd HTML is sent —
