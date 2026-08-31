@@ -6,7 +6,7 @@ import { Frame } from "./Placeholders";
 export default function Sponsors() {
   return (
     <section id="sponsors" className="g-ground-cool scroll-mt-20 rounded-[var(--g-r-xl)]">
-      <div className="g-wrap py-24 lg:py-28">
+      <div className="g-wrap py-16 lg:py-20">
         <Reveal y={22}>
           <h2 className="g-h2">Sponsors</h2>
         </Reveal>

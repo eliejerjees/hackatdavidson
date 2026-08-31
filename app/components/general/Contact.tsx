@@ -15,13 +15,13 @@ export default function Contact() {
         <Wash size={520} color="rgba(255,255,255,.14)" className="right-[-10%] bottom-[-30%]" />
       </div>
 
-      <div className="g-wrap relative py-24 text-center lg:py-32">
+      <div className="g-wrap relative py-16 text-center lg:py-20">
         <Reveal y={24}>
           <span
-            className="g-pill"
-            style={{ background: "rgba(255,255,255,.2)", color: "#fff" }}
+            className="g-label inline-flex items-center gap-2"
+            style={{ color: "rgba(255,255,255,.7)" }}
           >
-            <Icon icon="ph:hand-waving-fill" width="13" height="13" aria-hidden />
+            <Icon icon="ph:hand-waving-fill" width="14" height="14" aria-hidden />
             Reach out
           </span>
           <h2 className="g-h2 mx-auto mt-6 max-w-[20ch]">Say hi.</h2>

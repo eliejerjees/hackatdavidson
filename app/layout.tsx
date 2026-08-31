@@ -57,7 +57,10 @@ export default function RootLayout({
       lang="en"
       className={`${archivo.variable} ${geist.variable} ${caslon.variable} ${inter.variable} ${geistMono.variable} antialiased`}
     >
-      <body>{children}</body>
+      {/* suppressHydrationWarning: browser extensions (Grammarly, etc.)
+          inject attributes onto <body> after the SSR'd HTML is sent —
+          harmless, but React would otherwise flag it as a mismatch. */}
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

@@ -185,7 +185,14 @@ export default function Hero() {
               </span>
             ))}
           </span>
-          <span className="block" style={{ letterSpacing: "0.02em" }}>
+          <span
+            className="block"
+            style={{
+              letterSpacing: "0.02em",
+              fontFamily: "var(--font-caslon)",
+              fontWeight: 700,
+            }}
+          >
             Davidson
           </span>
         </h1>

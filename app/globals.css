@@ -1394,13 +1394,17 @@ html:has(.theme-worldtour)::-webkit-scrollbar-track {
 
   --g-red: #d42121;
   --g-red-deep: #a5171c;
-  --g-blue: #0057ff; /* electric azure — was a flat corporate indigo */
+  --g-blue: #2563eb; /* calmer royal blue — the electric #0057ff read as neon */
   --g-blue-soft: #e8efff;
   --g-green: #00c853; /* vivid emerald — was a muted eco-teal */
   --g-green-soft: #e1faeb;
   --g-red-soft: #fdecec;
   --g-pop: #ff2d78; /* hot magenta — sparing highlight accent, not a base color */
   --g-pop-soft: #ffe6f0;
+  --g-violet: #6d28d9; /* calmer, deeper violet — #7c3aed bordered on neon */
+  --g-violet-soft: #f1e9fe;
+  --g-orange: #ff6b00;
+  --g-orange-soft: #ffece0;
 
   /* Sandstone survives only for the hero's @ and its contour lines. */
   --g-sand: #e9ded3;

@@ -6,31 +6,38 @@ import Reveal from "../Reveal";
 import Wash from "./Wash";
 
 /**
- * Real projects from Hack@Davidson 2026, pulled from event photos. Only
- * AcoustiCare has a description sourced from an actual on-screen slide —
- * the rest are name + photo only until we get real writeups from the teams.
+ * Real projects from Hack@Davidson 2026. Photos pulled from event photos;
+ * Devpost links and blurbs verified by checking each team's actual
+ * submission page (not just the project-gallery listing).
  */
 const PROJECTS = [
   {
     name: "AcoustiCare",
     img: "/assets/projects/acousticare.jpg",
+    devpost: "https://devpost.com/software/acousticare",
     blurb:
-      "Turns environmental instability and communication breakdown into a live Surgical Risk Index — real-time situational awareness during rising instability, instead of reacting after errors occur.",
+      "Turns operating room noise and communication signals into real-time awareness, helping teams recognize rising risk early.",
   },
   {
     name: "Optimus",
     img: "/assets/projects/optimus.jpg",
-    blurb: null,
+    devpost: "https://devpost.com/software/optimist-ztvhg7",
+    blurb:
+      "An all-in-one event planner — manage guests, budgets, tasks, and vendors, and design your venue layout in 2D or 3D.",
   },
   {
     name: "ThreatSight",
     img: "/assets/projects/threatsight.jpg",
-    blurb: null,
+    devpost: "https://devpost.com/software/threatsight",
+    blurb:
+      "An AI-powered SOC that turns raw network traffic and honeypot data into organized, searchable, real-time security intelligence.",
   },
   {
     name: "CEV's Benchmark",
     img: "/assets/projects/cevs-benchmark.jpg",
-    blurb: null,
+    devpost: "https://devpost.com/software/cev-s-benchmark",
+    blurb:
+      "A Godot-built game testing reaction time, time perception, and memory — three human-benchmark mini-games in one consistent art style.",
   },
 ];
 
@@ -42,7 +49,7 @@ export default function Projects() {
         <Wash size={460} color="rgba(212,33,33,.08)" className="left-[-14%] bottom-[-6%]" />
       </div>
 
-      <div className="g-wrap-wide relative py-20 lg:py-24">
+      <div className="g-wrap-wide relative py-16 lg:py-20">
         <Reveal y={22}>
           <div className="flex flex-wrap items-end justify-between gap-6">
             <h2 className="g-h2 max-w-[18ch]">What we&apos;ve built</h2>
@@ -62,7 +69,13 @@ export default function Projects() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {PROJECTS.map((p, i) => (
             <Reveal key={p.name} y={22} delay={0.06 * i}>
-              <div className="g-tile h-full overflow-hidden bg-white">
+              <a
+                href={p.devpost}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label={`${p.name} on Devpost`}
+                className="g-tile g-tile-lift block h-full overflow-hidden bg-white"
+              >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={p.img}
@@ -72,6 +85,13 @@ export default function Projects() {
                     className="object-cover"
                     unoptimized
                   />
+                  <span
+                    aria-hidden
+                    className="absolute bottom-2 right-2 grid h-7 w-7 place-items-center rounded-full text-white shadow-md"
+                    style={{ background: "var(--g-ink)" }}
+                  >
+                    <Icon icon="ph:arrow-up-right-bold" width="13" height="13" />
+                  </span>
                 </div>
                 <div className="p-4">
                   <h3 className="g-h3 text-[0.98rem]">{p.name}</h3>
@@ -79,7 +99,7 @@ export default function Projects() {
                     {p.blurb ?? "Full writeup coming soon."}
                   </p>
                 </div>
-              </div>
+              </a>
             </Reveal>
           ))}
         </div>

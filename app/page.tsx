@@ -19,8 +19,8 @@ export default function Home() {
         <Hero />
         <About />
         <Programs />
-        <Projects />
         <Gallery />
+        <Projects />
         <Eboard />
         <Sponsors />
         <Contact />

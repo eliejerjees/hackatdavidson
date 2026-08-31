@@ -11,8 +11,8 @@ import { LogoMark } from "./Placeholders";
 const NAV = [
   { label: "About", href: "#about" },
   { label: "What we do", href: "#programs" },
-  { label: "Projects", href: "#projects" },
   { label: "Gallery", href: "#gallery" },
+  { label: "Projects", href: "#projects" },
   { label: "Team", href: "#team" },
   { label: "Sponsors", href: "#sponsors" },
 ];
