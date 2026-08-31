@@ -58,6 +58,12 @@ const MEMBERS: Member[] = [
   // Operations — Secretary, Treasurer, and Finance are all "keeping the
   // org's internal records straight," just different flavors of it.
   {
+    name: "Melissa Mugengano",
+    role: "Secretary",
+    category: "operations",
+    linkedin: "https://www.linkedin.com/in/melissa-mugengano/",
+  },
+  {
     name: "Arnav Biyani",
     role: "Treasurer",
     category: "operations",
@@ -77,12 +83,6 @@ const MEMBERS: Member[] = [
     category: "operations",
     linkedin: "https://www.linkedin.com/in/jennetylyasova/",
     photo: "/assets/eboard/jennet-ylyasova.jpg",
-  },
-  {
-    name: "Melissa Mugengano",
-    role: "Secretary",
-    category: "operations",
-    linkedin: "https://www.linkedin.com/in/melissa-mugengano/",
   },
   // Outreach
   {
