@@ -15,7 +15,7 @@ export default function Contact() {
         <Wash size={520} color="rgba(255,255,255,.14)" className="right-[-10%] bottom-[-30%]" />
       </div>
 
-      <div className="relative mx-auto max-w-[1180px] px-5 py-24 text-center sm:px-8 lg:py-32">
+      <div className="g-wrap relative py-24 text-center lg:py-32">
         <Reveal y={24}>
           <span
             className="g-pill"

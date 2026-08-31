@@ -1655,3 +1655,28 @@ html:has(.site-general)::-webkit-scrollbar-corner {
     scrollbar-color: #ffffff #d42121; /* thumb, track */
   }
 }
+
+/* ---- Wide section container ----
+   Sections use nearly the full viewport with a generous cap, instead of
+   floating a narrow 1180px column in a sea of white. Long-form text still
+   constrains itself locally (max-w-[Nch] on the paragraph, not the section). */
+.g-wrap {
+  width: 100%;
+  max-width: 1420px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(24px, 6vw, 104px);
+  padding-right: clamp(24px, 6vw, 104px);
+}
+
+/* Wider variant — for sections that want to run closer to the edges
+   (currently just About, so its photo can get bigger). Same idea as
+   .g-wrap, smaller margins. */
+.g-wrap-wide {
+  width: 100%;
+  max-width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(20px, 3.5vw, 56px);
+  padding-right: clamp(20px, 3.5vw, 56px);
+}

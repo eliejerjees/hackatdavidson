@@ -1,8 +1,8 @@
 "use client";
 
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 import Reveal from "../Reveal";
-import { Frame } from "./Placeholders";
 import Wash from "./Wash";
 
 const CELLS = [
@@ -37,7 +37,7 @@ export default function About() {
         <Wash size={480} color="rgba(18,160,106,.10)" className="left-[-12%] bottom-[6%]" />
       </div>
 
-      <div className="relative mx-auto max-w-[1180px] px-5 py-24 sm:px-8 lg:py-32">
+      <div className="g-wrap-wide relative py-24 lg:py-32">
         <div className="grid items-center gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <Reveal y={24}>
             <div>
@@ -62,15 +62,20 @@ export default function About() {
           {/* photo card, tipped, with a sticker riding the corner */}
           <Reveal y={26} delay={0.1}>
             <div className="relative">
-              <div
-                className="overflow-hidden rounded-[var(--g-r-xl)] shadow-[0_30px_60px_-34px_rgba(16,18,22,.45)]"
-                style={{ transform: "rotate(-1.6deg)" }}
-              >
-                <Frame ratio="3 / 2" icon="ph:users-three" />
+              <div className="relative aspect-[3/2] overflow-hidden rounded-[var(--g-r-xl)] shadow-[0_30px_60px_-34px_rgba(16,18,22,.45)]">
+                <Image
+                  src="/assets/about/club-photo.jpg"
+                  alt="Hack@Davidson members together after a hackathon"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                  unoptimized
+                />
               </div>
               <span
                 className="g-pill absolute -bottom-3 left-5 shadow-lg"
-                style={{ background: "var(--g-green)", color: "#fff", transform: "rotate(-3deg)" }}
+                style={{ background: "var(--g-green)", color: "#fff" }}
               >
                 Every major welcome
               </span>

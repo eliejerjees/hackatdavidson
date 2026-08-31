@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import { motion, useScroll, useTransform } from "motion/react";
 import SandTopography from "./SandTopography";
 
@@ -9,6 +10,30 @@ const NAV = [
   { label: "About", href: "#about" },
   { label: "Team", href: "#team" },
   { label: "Sponsors", href: "#sponsors" },
+];
+
+// Same accounts as the footer — kept in sync manually since there's only two spots.
+const SOCIALS = [
+  {
+    icon: "ph:instagram-logo-bold",
+    label: "Instagram",
+    href: "https://www.instagram.com/hackatdavidson/",
+  },
+  {
+    icon: "ph:linkedin-logo-bold",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/hackatdavidson/",
+  },
+  {
+    icon: "ph:discord-logo-bold",
+    label: "Discord",
+    href: "https://discord.com/invite/jvaPqNssAa",
+  },
+  {
+    icon: "ph:trophy-bold",
+    label: "Devpost project gallery",
+    href: "https://hack-davidson.devpost.com/project-gallery",
+  },
 ];
 
 /** Printer's registration mark, one per corner. */
@@ -128,6 +153,22 @@ export default function Hero() {
           <span className="g-mono whitespace-nowrap text-white/70">Est. 2024</span>
           <span className="h-px flex-1 bg-white/45" />
           <span className="h-3 w-px bg-white/45" />
+        </div>
+
+        <div className="mt-6 flex items-center gap-2.5">
+          {SOCIALS.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={s.label}
+              className="grid h-11 w-11 place-items-center rounded-full border text-white transition-colors hover:bg-white hover:text-[color:var(--g-red)]"
+              style={{ borderColor: "rgba(255,255,255,.35)" }}
+            >
+              <Icon icon={s.icon} width="19" height="19" aria-hidden />
+            </a>
+          ))}
         </div>
       </motion.div>
 

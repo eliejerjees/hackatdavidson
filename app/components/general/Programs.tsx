@@ -24,7 +24,7 @@ const TONE = {
 export default function Programs() {
   return (
     <section id="programs" className="g-ground-cool scroll-mt-20 rounded-[var(--g-r-xl)]">
-      <div className="mx-auto max-w-[1180px] px-5 py-24 sm:px-8 lg:py-28">
+      <div className="g-wrap py-24 lg:py-28">
         <Reveal y={22}>
           <h2 className="g-h2">What do we do?</h2>
         </Reveal>

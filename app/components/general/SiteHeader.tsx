@@ -44,7 +44,7 @@ export default function SiteHeader() {
             borderColor: "var(--g-rule)",
           }}
         >
-          <div className="mx-auto flex max-w-[1180px] items-center justify-between gap-6 px-5 py-3 sm:px-8">
+          <div className="g-wrap flex items-center justify-between gap-6 py-3">
             <a href="#top" className="flex items-center gap-2.5" aria-label="Back to top">
               <LogoMark size={28} />
               <span className="g-label hidden sm:inline">Hack@Davidson</span>

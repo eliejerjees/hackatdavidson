@@ -30,7 +30,7 @@ const SOCIALS = [
 export default function SiteFooter() {
   return (
     <footer className="g-ground-ink">
-      <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-8 px-5 py-10 sm:px-8">
+      <div className="g-wrap flex flex-wrap items-center justify-between gap-8 py-10">
         <div className="flex items-center gap-3">
           <LogoMark size={30} invert />
           <span className="g-label text-white">Hack@Davidson</span>

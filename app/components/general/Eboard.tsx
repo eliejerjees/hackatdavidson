@@ -34,22 +34,24 @@ const MEMBERS: Member[] = [
     role: "Advisor",
     linkedin: "https://www.linkedin.com/in/murtaza-nikzad-877722158/",
   },
-  { name: "Arnav Biyani" },
-  { name: "Delila Cruz" },
-  { name: "Julia Gelina" },
-  {
-    name: "Julia Holt",
-    linkedin: "https://www.linkedin.com/in/julia-holt-1a2343334/",
-  },
-  { name: "Jonathan Arenas" },
-  { name: "Javier Sanchez" },
-  { name: "Jennet Merdanovna" },
-  { name: "Melissa Mugengano" },
+  { name: "Melissa Mugengano", role: "Secretary" },
+  { name: "Arnav Biyani", role: "Treasurer" },
+  { name: "Julia Gelina", role: "Logistics" },
   {
     name: "Tenzing Dhendup Dorji",
+    role: "Outreach",
     linkedin: "https://www.linkedin.com/in/tenzing-dhendup-dorji/",
   },
-  { name: "Yahya Sheikh" },
+  {
+    name: "Julia Holt",
+    role: "Outreach",
+    linkedin: "https://www.linkedin.com/in/julia-holt-1a2343334/",
+  },
+  { name: "Jonathan Arenas", role: "Outreach" },
+  { name: "Delila Cruz", role: "Branding Lead" },
+  { name: "Yahya Sheikh", role: "Social Media Chair" },
+  { name: "Javier Sanchez", role: "Finance" },
+  { name: "Jennet Merdanovna", role: "Finance" },
 ];
 
 /** Colour carries the hierarchy now that the group headers are gone. */
@@ -68,7 +70,7 @@ export default function Eboard() {
         <Wash size={460} color="rgba(30,79,216,.10)" className="right-[-12%] bottom-[8%]" />
       </div>
 
-      <div className="relative mx-auto max-w-[1180px] px-5 py-24 sm:px-8 lg:py-32">
+      <div className="g-wrap relative py-24 lg:py-32">
         <Reveal y={22}>
           <h2 className="g-h2">Our people</h2>
         </Reveal>
@@ -77,12 +79,8 @@ export default function Eboard() {
           {MEMBERS.map((m, i) => (
             <Reveal key={m.name} y={18} delay={0.02 * i}>
               <div className="group">
-                {/* wrapper stays upright so the badge doesn't tilt with the photo */}
                 <div className="relative">
-                  <div
-                    className="overflow-hidden rounded-[var(--g-r-lg)] transition-transform duration-300 group-hover:-translate-y-1.5"
-                    style={{ transform: `rotate(${i % 2 ? 1 : -1}deg)` }}
-                  >
+                  <div className="overflow-hidden rounded-[var(--g-r-lg)] transition-transform duration-300 group-hover:-translate-y-1.5">
                     <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
                   </div>
 
