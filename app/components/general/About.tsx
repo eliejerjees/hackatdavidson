@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Reveal from "../Reveal";
-import Wash from "./Wash";
 
 // One horizontal strip, three columns — not three colored boxes. The accent
 // colour lives on the heading text only; everything else stays neutral ink
@@ -11,31 +10,24 @@ const COLUMNS = [
   {
     n: "01",
     title: "Meet people",
-    tone: "var(--g-red)",
     points: ["Every major welcome", "No experience needed", "Meet weekly"],
   },
   {
     n: "02",
     title: "Build things",
-    tone: "var(--g-blue)",
     points: ["Workshops and build nights", "Learn by doing", "Ship real projects"],
   },
   {
     n: "03",
     title: "Get involved",
-    tone: "var(--g-green)",
     points: ["Free to join", "Mentorship available", "Career building"],
   },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="relative scroll-mt-20 overflow-hidden bg-white">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <Wash size={520} color="rgba(212,33,33,.08)" className="right-[-14%] top-[-22%]" />
-      </div>
-
-      <div className="g-wrap-wide relative py-16 lg:py-20">
+    <section id="about" className="scroll-mt-20 bg-white">
+      <div className="g-wrap-wide py-16 lg:py-20">
         <div className="grid items-center gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <Reveal y={24}>
             <div>
@@ -92,7 +84,7 @@ export default function About() {
                 </span>
                 <h3
                   className="g-h3 mt-2 text-[1.15rem]"
-                  style={{ color: c.tone }}
+                  style={{ color: "var(--g-red)" }}
                 >
                   {c.title}
                 </h3>

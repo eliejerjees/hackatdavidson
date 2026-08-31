@@ -1,23 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Reveal from "../Reveal";
 import { Frame } from "./Placeholders";
-import Wash from "./Wash";
 
 type Category = "president" | "advisor" | "operations" | "brand" | "outreach" | "logistics";
 
-type Member = { name: string; role?: string; category: Category; linkedin?: string };
-
-/** One color per category — not one per role, since several roles share a
- * category (Secretary/Treasurer/Finance are all "operations", etc). */
-const CATEGORY_TONE: Record<Category, string> = {
-  president: "var(--g-red)",
-  advisor: "var(--g-blue)",
-  operations: "var(--g-green)",
-  brand: "var(--g-pop)",
-  outreach: "var(--g-orange)",
-  logistics: "var(--g-violet)",
+type Member = {
+  name: string;
+  role?: string;
+  category: Category;
+  linkedin?: string;
+  photo?: string;
 };
 
 // Grouped by category (leadership first, then in the order the roles were
@@ -29,12 +24,14 @@ const MEMBERS: Member[] = [
     role: "Co-President",
     category: "president",
     linkedin: "https://www.linkedin.com/in/eliejerjees/",
+    photo: "/assets/eboard/elie-jerjees.png",
   },
   {
     name: "Tanaka Makoni",
     role: "Co-President",
     category: "president",
     linkedin: "https://www.linkedin.com/in/tanaka-makoni-b415a8268/",
+    photo: "/assets/eboard/tanaka-makoni.jpeg",
   },
   // Advisors
   {
@@ -42,27 +39,58 @@ const MEMBERS: Member[] = [
     role: "Advisor",
     category: "advisor",
     linkedin: "https://www.linkedin.com/in/alpniksarli/",
+    photo: "/assets/eboard/alp-niksarli.jpg",
   },
   {
     name: "Gopesh Baheti",
     role: "Advisor",
     category: "advisor",
     linkedin: "https://www.linkedin.com/in/gobaheti/",
+    photo: "/assets/eboard/funny/goatpesh.jpg",
   },
   {
     name: "Murtaza Nikzad",
     role: "Advisor",
     category: "advisor",
     linkedin: "https://www.linkedin.com/in/murtaza-nikzad-877722158/",
+    photo: "/assets/eboard/murtaza-nikzad.jpg",
   },
   // Operations — Secretary, Treasurer, and Finance are all "keeping the
   // org's internal records straight," just different flavors of it.
-  { name: "Arnav Biyani", role: "Treasurer", category: "operations" },
-  { name: "Javier Sanchez", role: "Finance", category: "operations" },
-  { name: "Jennet Merdanovna", role: "Finance", category: "operations" },
-  { name: "Melissa Mugengano", role: "Secretary", category: "operations" },
+  {
+    name: "Arnav Biyani",
+    role: "Treasurer",
+    category: "operations",
+    linkedin: "https://www.linkedin.com/in/arnav-biyani/",
+    photo: "/assets/eboard/arnav-biyani.jpg",
+  },
+  {
+    name: "Javier Sanchez",
+    role: "Finance",
+    category: "operations",
+    linkedin: "https://www.linkedin.com/in/javierestefanosanchez",
+    photo: "/assets/eboard/javier-sanchez.jpg",
+  },
+  {
+    name: "Jennet Ylyasova",
+    role: "Finance",
+    category: "operations",
+    linkedin: "https://www.linkedin.com/in/jennetylyasova/",
+    photo: "/assets/eboard/jennet-ylyasova.jpg",
+  },
+  {
+    name: "Melissa Mugengano",
+    role: "Secretary",
+    category: "operations",
+    linkedin: "https://www.linkedin.com/in/melissa-mugengano/",
+  },
   // Outreach
-  { name: "Jonathan Arenas", role: "Outreach", category: "outreach" },
+  {
+    name: "Jonathan Arenas",
+    role: "Outreach",
+    category: "outreach",
+    linkedin: "https://www.linkedin.com/in/jonathangarenas/",
+  },
   {
     name: "Julia Holt",
     role: "Outreach",
@@ -76,62 +104,83 @@ const MEMBERS: Member[] = [
     linkedin: "https://www.linkedin.com/in/tenzing-dhendup-dorji/",
   },
   // Logistics
-  { name: "Julia Gelina", role: "Logistics", category: "logistics" },
+  {
+    name: "Julia Gelina",
+    role: "Logistics",
+    category: "logistics",
+    linkedin: "https://www.linkedin.com/in/julia-gelina-86831a321/",
+  },
   // Branding + Social Media
-  { name: "Delila Cruz", role: "Branding Lead", category: "brand" },
-  { name: "Yahya Sheikh", role: "Social Media Chair", category: "brand" },
+  {
+    name: "Delila Cruz",
+    role: "Branding Lead",
+    category: "brand",
+    linkedin: "https://www.linkedin.com/in/delila-cruz/",
+  },
+  {
+    name: "Yahya Sheikh",
+    role: "Social Media Chair",
+    category: "brand",
+    linkedin: "https://www.linkedin.com/in/yahya-sheikh-6ba6062a5/",
+  },
 ];
 
 export default function Eboard() {
   return (
-    <section id="team" className="relative scroll-mt-20 overflow-hidden bg-white">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <Wash size={560} color="rgba(212,33,33,.10)" className="left-[-14%] top-[4%]" />
-        <Wash size={460} color="rgba(30,79,216,.10)" className="right-[-12%] bottom-[8%]" />
-      </div>
-
-      <div className="g-wrap relative py-16 lg:py-20">
+    <section id="team" className="scroll-mt-20 bg-white">
+      <div className="g-wrap py-16 lg:py-20">
         <Reveal y={22}>
           <h2 className="g-h2">Our team</h2>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-11 sm:grid-cols-3 lg:grid-cols-5">
-          {MEMBERS.map((m, i) => (
+          {MEMBERS.map((m, i) => {
+            const photo = m.photo ? (
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src={m.photo}
+                  alt={m.name}
+                  fill
+                  sizes="(max-width: 640px) 50vw, 20vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  unoptimized
+                />
+              </div>
+            ) : (
+              <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
+            );
+
+            return (
             <Reveal key={m.name} y={18} delay={0.02 * i}>
               <div className="group">
-                <div className="relative">
+                <div className="relative overflow-hidden rounded-[var(--g-r-lg)]">
                   {m.linkedin ? (
                     <a
                       href={m.linkedin}
                       target="_blank"
                       rel="noreferrer noopener"
                       aria-label={`${m.name} on LinkedIn`}
-                      className="block overflow-hidden rounded-[var(--g-r-lg)] transition-transform duration-300 group-hover:-translate-y-1.5"
+                      className="block"
                     >
-                      <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
+                      {photo}
+                      <span
+                        aria-hidden
+                        className="absolute bottom-2 right-2 grid h-8 w-8 place-items-center rounded-full text-white shadow-md"
+                        style={{ background: "var(--g-red)" }}
+                      >
+                        <Icon icon="ph:linkedin-logo-bold" width="16" height="16" />
+                      </span>
                     </a>
                   ) : (
-                    <div className="overflow-hidden rounded-[var(--g-r-lg)] transition-transform duration-300 group-hover:-translate-y-1.5">
-                      <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
-                    </div>
+                    photo
                   )}
-
-                  {m.linkedin ? (
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute -bottom-2 -right-1.5 grid h-9 w-9 place-items-center rounded-full text-white shadow-md transition-transform group-hover:scale-110"
-                      style={{ background: "var(--g-red)" }}
-                    >
-                      <Icon icon="ph:linkedin-logo-bold" width="17" height="17" />
-                    </span>
-                  ) : null}
                 </div>
 
                 <h3 className="g-h3 mt-5 text-[0.98rem] leading-tight">{m.name}</h3>
                 <p
                   className="mt-1 text-[0.85rem] leading-snug"
                   style={{
-                    color: m.role ? CATEGORY_TONE[m.category] : "var(--g-muted)",
+                    color: m.role ? "var(--g-red)" : "var(--g-muted)",
                     fontWeight: m.role ? 500 : 400,
                     opacity: m.role ? 1 : 0.6,
                   }}
@@ -140,7 +189,8 @@ export default function Eboard() {
                 </p>
               </div>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

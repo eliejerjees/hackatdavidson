@@ -48,8 +48,8 @@ export default function SiteHeader() {
             borderColor: "var(--g-rule)",
           }}
         >
-          <div className="g-wrap flex items-center justify-between gap-6 py-3">
-            <a href="#top" className="flex items-center gap-2.5" aria-label="Back to top">
+          <div className="g-wrap grid grid-cols-[auto_1fr_auto] items-center gap-6 py-3 md:grid-cols-[1fr_auto_1fr]">
+            <a href="#top" className="flex items-center gap-2.5 justify-self-start" aria-label="Back to top">
               <LogoMark size={28} />
               <span className="g-label hidden sm:inline">Hack@Davidson</span>
             </a>
@@ -59,7 +59,7 @@ export default function SiteHeader() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="g-label transition-colors hover:text-[color:var(--g-red)]"
+                  className="g-label whitespace-nowrap transition-colors hover:text-[color:var(--g-red)]"
                   style={{ color: "var(--g-muted)" }}
                 >
                   {item.label}
@@ -67,7 +67,7 @@ export default function SiteHeader() {
               ))}
             </nav>
 
-            <div className="hidden items-center gap-2.5 md:flex">
+            <div className="hidden items-center justify-self-end gap-2.5 md:flex">
               <Link href="https://2027.hackatdavidson.com" className="g-btn g-btn-outline !px-4 !py-2.5">
                 2027
               </Link>
@@ -81,7 +81,7 @@ export default function SiteHeader() {
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-label="Toggle menu"
-              className="grid h-9 w-9 place-items-center rounded-[2px] border md:hidden"
+              className="col-start-3 grid h-9 w-9 shrink-0 place-items-center justify-self-end rounded-[2px] border md:hidden"
               style={{ borderColor: "var(--g-rule)" }}
             >
               <Icon icon={open ? "ph:x" : "ph:list"} width="18" height="18" />
@@ -111,7 +111,7 @@ export default function SiteHeader() {
                   className="g-label py-3.5"
                   style={{ color: "var(--g-red)" }}
                 >
-                  2027 Hackathon →
+                  2027 Hackathon
                 </Link>
               </nav>
             </div>

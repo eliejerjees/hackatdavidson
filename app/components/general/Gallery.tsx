@@ -45,12 +45,12 @@ function pickRow(offset: number, count: number): Shot[] {
   );
 }
 
-// Three horizontal rows, alternating direction, each offset into the shared
-// pool so they're not all showing the same photos at the same time.
+// Two horizontal rows, alternating direction. Split the pool in half so
+// between the two rows every photo shows up somewhere, none repeated.
+const HALF = Math.ceil(ALL_SHOTS.length / 2);
 const ROWS: { tiles: Shot[]; duration: number; reverse: boolean }[] = [
-  { tiles: pickRow(0, 16), duration: 62, reverse: false },
-  { tiles: pickRow(18, 16), duration: 70, reverse: true },
-  { tiles: pickRow(36, 16), duration: 66, reverse: false },
+  { tiles: pickRow(0, HALF), duration: 62, reverse: false },
+  { tiles: pickRow(HALF, ALL_SHOTS.length - HALF), duration: 70, reverse: true },
 ];
 
 export default function Gallery() {

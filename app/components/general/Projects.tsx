@@ -1,9 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Icon } from "@iconify/react";
 import Reveal from "../Reveal";
-import Wash from "./Wash";
 
 /**
  * Real projects from Hack@Davidson 2026. Photos pulled from event photos;
@@ -23,7 +21,7 @@ const PROJECTS = [
     img: "/assets/projects/optimus.jpg",
     devpost: "https://devpost.com/software/optimist-ztvhg7",
     blurb:
-      "An all-in-one event planner — manage guests, budgets, tasks, and vendors, and design your venue layout in 2D or 3D.",
+      "An all-in-one event planner: manage guests, budgets, tasks, and vendors, and design your venue layout in 2D or 3D.",
   },
   {
     name: "ThreatSight",
@@ -37,19 +35,14 @@ const PROJECTS = [
     img: "/assets/projects/cevs-benchmark.jpg",
     devpost: "https://devpost.com/software/cev-s-benchmark",
     blurb:
-      "A Godot-built game testing reaction time, time perception, and memory — three human-benchmark mini-games in one consistent art style.",
+      "A Godot-built game testing reaction time, time perception, and memory: three human-benchmark mini-games in one consistent art style.",
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative scroll-mt-20 overflow-hidden bg-white">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <Wash size={560} color="rgba(30,79,216,.10)" className="right-[-12%] top-[-10%]" />
-        <Wash size={460} color="rgba(212,33,33,.08)" className="left-[-14%] bottom-[-6%]" />
-      </div>
-
-      <div className="g-wrap-wide relative py-16 lg:py-20">
+    <section id="projects" className="scroll-mt-20 bg-white">
+      <div className="g-wrap-wide py-16 lg:py-20">
         <Reveal y={22}>
           <div className="flex flex-wrap items-end justify-between gap-6">
             <h2 className="g-h2 max-w-[18ch]">What we&apos;ve built</h2>
@@ -61,7 +54,6 @@ export default function Projects() {
               style={{ color: "var(--g-red)" }}
             >
               See every project on Devpost
-              <Icon icon="ph:arrow-up-right-bold" width="13" height="13" aria-hidden />
             </a>
           </div>
         </Reveal>
@@ -85,13 +77,6 @@ export default function Projects() {
                     className="object-cover"
                     unoptimized
                   />
-                  <span
-                    aria-hidden
-                    className="absolute bottom-2 right-2 grid h-7 w-7 place-items-center rounded-full text-white shadow-md"
-                    style={{ background: "var(--g-ink)" }}
-                  >
-                    <Icon icon="ph:arrow-up-right-bold" width="13" height="13" />
-                  </span>
                 </div>
                 <div className="p-4">
                   <h3 className="g-h3 text-[0.98rem]">{p.name}</h3>

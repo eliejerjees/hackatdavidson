@@ -35,7 +35,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Hack@Davidson — Davidson College's student tech community",
+  title: "Hack@Davidson: Davidson College's student tech community",
   description:
     "Hack@Davidson is a student-run organization at Davidson College building a community of makers across every major. We run Davidson's annual hackathon, workshops, build nights, and tech talks.",
 };

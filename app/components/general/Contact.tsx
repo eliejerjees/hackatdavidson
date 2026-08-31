@@ -2,20 +2,14 @@
 
 import { Icon } from "@iconify/react";
 import Reveal from "../Reveal";
-import Wash from "./Wash";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="g-ground-red relative scroll-mt-20 overflow-hidden rounded-t-[var(--g-r-xl)]"
+      className="g-ground-red scroll-mt-20 overflow-hidden rounded-t-[var(--g-r-xl)]"
     >
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <Wash size={720} color="rgba(255,255,255,.18)" className="left-[-16%] top-1/2 -translate-y-1/2" />
-        <Wash size={520} color="rgba(255,255,255,.14)" className="right-[-10%] bottom-[-30%]" />
-      </div>
-
-      <div className="g-wrap relative py-16 text-center lg:py-20">
+      <div className="g-wrap py-16 text-center lg:py-20">
         <Reveal y={24}>
           <span
             className="g-label inline-flex items-center gap-2"
@@ -33,7 +27,6 @@ export default function Contact() {
             className="g-btn mt-10 !bg-white !px-8 !py-4 !text-[0.9rem] !text-[color:var(--g-red)] transition-transform hover:-translate-y-1"
           >
             hack@davidson.edu
-            <Icon icon="ph:arrow-up-right-bold" width="16" height="16" aria-hidden />
           </a>
         </Reveal>
       </div>

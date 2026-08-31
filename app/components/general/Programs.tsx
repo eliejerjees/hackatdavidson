@@ -1,14 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Icon } from "@iconify/react";
 import Reveal from "../Reveal";
 import { Frame } from "./Placeholders";
 
 // The annual hackathon lives in the flagship block above, not here — this
 // grid is everything else, the ongoing programming. Rules and typography
-// carry it, not rounded cards; colour lives on the title only, cycling
-// red/blue/green.
+// carry it, not rounded cards; colour lives on the title only.
 const PROGRAMS = [
   { title: "Workshops", when: "Biweekly", line: "Technical and creative sessions" },
   { title: "Build nights", when: "Weekly", line: "Work on projects with other students" },
@@ -16,16 +14,6 @@ const PROGRAMS = [
   { title: "Career prep", when: "Fall + winter", line: "Resumes, recruiting, and interview prep" },
   { title: "Socials", when: "All year", line: "Meet people outside of building" },
   { title: "Networking events", when: "Ongoing", line: "Meet alumni, founders, and engineers in the industry" },
-];
-
-// One unique color per item now — six colors for six items, no repeats.
-const TONES = [
-  "var(--g-red)",
-  "var(--g-blue)",
-  "var(--g-green)",
-  "var(--g-violet)",
-  "var(--g-orange)",
-  "var(--g-pop)",
 ];
 
 export default function Programs() {
@@ -59,11 +47,10 @@ export default function Programs() {
                   className="mt-4 max-w-[38ch] text-[0.95rem] leading-snug"
                   style={{ color: "rgba(255,255,255,.8)" }}
                 >
-                  48 hours every spring — our biggest event of the year.
+                  48 hours every spring, our biggest event of the year.
                 </p>
                 <Link href="https://2027.hackatdavidson.com" className="g-btn g-btn-invert mt-8">
                   Visit the event site
-                  <Icon icon="ph:arrow-right-bold" width="16" height="16" aria-hidden />
                 </Link>
               </div>
               <div className="overflow-hidden rounded-[var(--g-r-lg)]">
@@ -93,7 +80,7 @@ export default function Programs() {
                 className="h-full border-b border-r p-6 lg:p-7"
                 style={{ borderColor: "var(--g-rule)" }}
               >
-                <h3 className="g-h3 text-[1.05rem]" style={{ color: TONES[i % TONES.length] }}>
+                <h3 className="g-h3 text-[1.05rem]" style={{ color: "var(--g-red)" }}>
                   {p.title}
                 </h3>
                 <span className="g-label mt-3 block" style={{ color: "var(--g-taupe)" }}>
