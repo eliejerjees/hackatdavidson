@@ -2,13 +2,21 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Luckiest_Guy } from "next/font/google";
+import { Luckiest_Guy, Playfair_Display } from "next/font/google";
 import { Icon } from "@iconify/react";
 import { motion, useScroll, useTransform } from "motion/react";
 import SandTopography from "./SandTopography";
 
 // A genuine bubble-letter font, just for the "H".
 const luckiestGuy = Luckiest_Guy({ weight: "400", subsets: ["latin"] });
+
+// A different serif from Davidson's Caslon on purpose — same idea (serif,
+// italic) but a distinct typeface, so the "A" still reads as its own letter.
+const playfairDisplay = Playfair_Display({
+  weight: "700",
+  style: "italic",
+  subsets: ["latin"],
+});
 
 const NAV = [
   { label: "About", href: "#about" },
@@ -59,14 +67,14 @@ const HACK_LETTERS: {
   // Luckiest Guy's glyphs sit unusually high in their own line box compared
   // to the other fonts here, so it needs a manual nudge down to actually
   // line up on the same visual baseline.
-  { ch: "H", font: luckiestGuy.style.fontFamily, color: "#ffffff", lift: 0.075 },
+  { ch: "H", font: luckiestGuy.style.fontFamily, color: "#ffffff", lift: 0.17 },
   {
     ch: "A",
-    font: "var(--font-caslon)",
+    font: playfairDisplay.style.fontFamily,
     italic: true,
     color: "var(--g-sand)",
     tilt: -4,
-    lift: 0.03,
+    lift: -0.04,
   },
   { ch: "C", font: "var(--font-archivo)", stroke: "#ffffff", tilt: 3 },
   {
@@ -76,7 +84,7 @@ const HACK_LETTERS: {
     tilt: -2,
     lift: 0.04,
   },
-  { ch: "@", font: "var(--font-archivo)", color: "var(--g-sand)" },
+  { ch: "@", font: "var(--font-archivo)", color: "var(--g-sand)", lift: -0.13 },
 ];
 
 export default function Hero() {
@@ -161,10 +169,7 @@ export default function Hero() {
             letterSpacing: "-0.01em",
           }}
         >
-          <span
-            className="mx-auto flex items-end justify-center"
-            style={{ marginLeft: "0.325em" }}
-          >
+          <span className="mx-auto flex items-end justify-center">
             {HACK_LETTERS.map((l, i) => (
               <span
                 key={i}
