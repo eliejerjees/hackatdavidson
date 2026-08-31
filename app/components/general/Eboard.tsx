@@ -18,7 +18,11 @@ const MEMBERS: Member[] = [
     role: "Co-President",
     linkedin: "https://www.linkedin.com/in/tanaka-makoni-b415a8268/",
   },
-  { name: "Elie Jerjees", role: "Co-President" },
+  {
+    name: "Elie Jerjees",
+    role: "Co-President",
+    linkedin: "https://www.linkedin.com/in/eliejerjees/",
+  },
   {
     name: "Alp Niksarli",
     role: "Advisor",
@@ -80,21 +84,30 @@ export default function Eboard() {
             <Reveal key={m.name} y={18} delay={0.02 * i}>
               <div className="group">
                 <div className="relative">
-                  <div className="overflow-hidden rounded-[var(--g-r-lg)] transition-transform duration-300 group-hover:-translate-y-1.5">
-                    <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
-                  </div>
-
                   {m.linkedin ? (
                     <a
                       href={m.linkedin}
                       target="_blank"
                       rel="noreferrer noopener"
                       aria-label={`${m.name} on LinkedIn`}
-                      className="absolute -bottom-2 -right-1.5 grid h-9 w-9 place-items-center rounded-full text-white shadow-md transition-transform hover:scale-110"
+                      className="block overflow-hidden rounded-[var(--g-r-lg)] transition-transform duration-300 group-hover:-translate-y-1.5"
+                    >
+                      <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
+                    </a>
+                  ) : (
+                    <div className="overflow-hidden rounded-[var(--g-r-lg)] transition-transform duration-300 group-hover:-translate-y-1.5">
+                      <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
+                    </div>
+                  )}
+
+                  {m.linkedin ? (
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute -bottom-2 -right-1.5 grid h-9 w-9 place-items-center rounded-full text-white shadow-md transition-transform group-hover:scale-110"
                       style={{ background: "var(--g-red)" }}
                     >
-                      <Icon icon="ph:linkedin-logo-bold" width="17" height="17" aria-hidden />
-                    </a>
+                      <Icon icon="ph:linkedin-logo-bold" width="17" height="17" />
+                    </span>
                   ) : null}
                 </div>
 

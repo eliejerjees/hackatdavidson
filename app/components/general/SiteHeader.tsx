@@ -6,9 +6,13 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { LogoMark } from "./Placeholders";
 
+// "Contact" isn't in this list — it already has its own CTA button (desktop)
+// and gets appended separately in the mobile menu below.
 const NAV = [
   { label: "About", href: "#about" },
   { label: "What we do", href: "#programs" },
+  { label: "Projects", href: "#projects" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Team", href: "#team" },
   { label: "Sponsors", href: "#sponsors" },
 ];
@@ -50,7 +54,7 @@ export default function SiteHeader() {
               <span className="g-label hidden sm:inline">Hack@Davidson</span>
             </a>
 
-            <nav className="hidden items-center gap-7 md:flex" aria-label="Main">
+            <nav className="hidden items-center gap-5 md:flex" aria-label="Main">
               {NAV.map((item) => (
                 <a
                   key={item.href}

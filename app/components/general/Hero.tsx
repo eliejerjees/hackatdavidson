@@ -2,12 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Luckiest_Guy } from "next/font/google";
 import { Icon } from "@iconify/react";
 import { motion, useScroll, useTransform } from "motion/react";
 import SandTopography from "./SandTopography";
 
+// A genuine bubble-letter font, just for the "H".
+const luckiestGuy = Luckiest_Guy({ weight: "400", subsets: ["latin"] });
+
 const NAV = [
   { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
   { label: "Team", href: "#team" },
   { label: "Sponsors", href: "#sponsors" },
 ];
@@ -36,16 +41,43 @@ const SOCIALS = [
   },
 ];
 
-/** Printer's registration mark, one per corner. */
-function CropMark({ className }: { className: string }) {
-  return (
-    <svg viewBox="0 0 40 40" className={`absolute h-6 w-6 ${className}`} aria-hidden>
-      <g stroke="rgba(255,255,255,.5)" strokeWidth="2">
-        <path d="M0 6h14M6 0v14" />
-      </g>
-    </svg>
-  );
-}
+// "HACK@" — one letter, one idea each. "Davidson" stays a single clean
+// block below it on purpose: the top line carries the personality, the
+// bottom line anchors it.
+const HACK_LETTERS: {
+  ch: string;
+  font?: string;
+  italic?: boolean;
+  color?: string;
+  stroke?: string;
+  tilt?: number;
+  lift?: number;
+  scale?: number;
+  shadow?: string;
+  weight?: number;
+}[] = [
+  // Luckiest Guy's glyphs sit unusually high in their own line box compared
+  // to the other fonts here, so it needs a manual nudge down to actually
+  // line up on the same visual baseline.
+  { ch: "H", font: luckiestGuy.style.fontFamily, color: "#ffffff", lift: 0.075 },
+  {
+    ch: "A",
+    font: "var(--font-caslon)",
+    italic: true,
+    color: "var(--g-sand)",
+    tilt: -4,
+    lift: 0.03,
+  },
+  { ch: "C", font: "var(--font-archivo)", stroke: "#ffffff", tilt: 3 },
+  {
+    ch: "K",
+    font: "var(--font-mono)",
+    color: "rgba(255,255,255,.85)",
+    tilt: -2,
+    lift: 0.04,
+  },
+  { ch: "@", font: "var(--font-archivo)", color: "var(--g-sand)" },
+];
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -67,7 +99,7 @@ export default function Hero() {
   return (
     <div
       ref={ref}
-      className="relative flex min-h-[100svh] flex-col overflow-hidden"
+      className="relative flex min-h-[100svh] select-none flex-col overflow-hidden"
       style={{ background: "var(--g-red)" }}
     >
       {/* --- The sand: procedural contours, pushed by the cursor --- */}
@@ -82,13 +114,6 @@ export default function Hero() {
             "radial-gradient(46% 40% at 50% 46%, rgba(212,33,33,.72), transparent 72%)",
         }}
       />
-
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <CropMark className="left-4 top-4" />
-        <CropMark className="right-4 top-4 rotate-90" />
-        <CropMark className="bottom-4 right-4 rotate-180" />
-        <CropMark className="bottom-4 left-4 -rotate-90" />
-      </div>
 
       {/* --- Nav --- */}
       <nav
@@ -137,10 +162,28 @@ export default function Hero() {
           }}
         >
           <span
-            className="block"
-            style={{ letterSpacing: "0.325em", marginLeft: "0.325em" }}
+            className="mx-auto flex items-end justify-center"
+            style={{ marginLeft: "0.325em" }}
           >
-            Hack<span style={{ color: "var(--g-sand)" }}>@</span>
+            {HACK_LETTERS.map((l, i) => (
+              <span
+                key={i}
+                className="inline-block"
+                style={{
+                  fontFamily: l.font,
+                  fontStyle: l.italic ? "italic" : "normal",
+                  color: l.stroke ? "transparent" : (l.color ?? "inherit"),
+                  WebkitTextStroke: l.stroke ? `2px ${l.stroke}` : undefined,
+                  textShadow: l.shadow,
+                  fontWeight: l.weight,
+                  transformOrigin: "bottom",
+                  transform: `rotate(${l.tilt ?? 0}deg) translateY(${l.lift ?? 0}em) scale(${l.scale ?? 1})`,
+                  marginRight: i === HACK_LETTERS.length - 1 ? 0 : "0.18em",
+                }}
+              >
+                {l.ch}
+              </span>
+            ))}
           </span>
           <span className="block" style={{ letterSpacing: "0.02em" }}>
             Davidson
@@ -150,7 +193,7 @@ export default function Hero() {
         <div className="mt-7 flex w-full max-w-[420px] items-center gap-3">
           <span className="h-3 w-px bg-white/45" />
           <span className="h-px flex-1 bg-white/45" />
-          <span className="g-mono whitespace-nowrap text-white/70">Est. 2024</span>
+          <span className="g-mono whitespace-nowrap text-white/70">Est. 2022</span>
           <span className="h-px flex-1 bg-white/45" />
           <span className="h-3 w-px bg-white/45" />
         </div>

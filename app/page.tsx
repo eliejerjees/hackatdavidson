@@ -2,6 +2,7 @@ import SiteHeader from "./components/general/SiteHeader";
 import Hero from "./components/general/Hero";
 import About from "./components/general/About";
 import Programs from "./components/general/Programs";
+import Projects from "./components/general/Projects";
 import Gallery from "./components/general/Gallery";
 import Eboard from "./components/general/Eboard";
 import Sponsors from "./components/general/Sponsors";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <About />
         <Programs />
+        <Projects />
         <Gallery />
         <Eboard />
         <Sponsors />

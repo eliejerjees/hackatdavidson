@@ -1394,11 +1394,13 @@ html:has(.theme-worldtour)::-webkit-scrollbar-track {
 
   --g-red: #d42121;
   --g-red-deep: #a5171c;
-  --g-blue: #1e4fd8;
-  --g-blue-soft: #eaf0ff;
-  --g-green: #12a06a;
-  --g-green-soft: #e6f7ef;
+  --g-blue: #0057ff; /* electric azure — was a flat corporate indigo */
+  --g-blue-soft: #e8efff;
+  --g-green: #00c853; /* vivid emerald — was a muted eco-teal */
+  --g-green-soft: #e1faeb;
   --g-red-soft: #fdecec;
+  --g-pop: #ff2d78; /* hot magenta — sparing highlight accent, not a base color */
+  --g-pop-soft: #ffe6f0;
 
   /* Sandstone survives only for the hero's @ and its contour lines. */
   --g-sand: #e9ded3;
@@ -1679,4 +1681,28 @@ html:has(.site-general)::-webkit-scrollbar-corner {
   margin-right: auto;
   padding-left: clamp(20px, 3.5vw, 56px);
   padding-right: clamp(20px, 3.5vw, 56px);
+}
+
+/* ---- Gallery: two vertical lanes, drifting in opposite directions ----
+   Each lane renders its tile sequence twice, back to back, then animates
+   translateY 0 -> -50% (exactly one sequence's height) forever — since the
+   second half is identical to the first, the loop is seamless. Reversing
+   the same keyframes gives the opposite direction "for free". */
+@keyframes g-lane-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.g-lane-track {
+  /* Deliberately NOT gated behind prefers-reduced-motion — this one should
+     always move regardless of the viewer's system setting. */
+  animation: g-lane-scroll linear infinite;
+}
+
+.g-lane-track:hover {
+  animation-play-state: paused;
 }

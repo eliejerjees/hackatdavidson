@@ -23,6 +23,13 @@ const AMP_IN_TAU = 0.5; // s to press in
 const AMP_OUT_TAU = 1.2; // s to settle back once the pointer leaves
 const MAX_DT = 0.05; // s — clamp so a backgrounded tab doesn't snap on return
 
+/* --- click ripple: a thin ring that expands outward from the click and fades --- */
+const RIPPLE_LIFE = 1.6; // s before a ripple is fully retired
+const RIPPLE_SPEED = 640; // px/s the ring expands
+const RIPPLE_WIDTH = 42; // px, ring thickness
+const RIPPLE_AMP = 1.5; // how much it bulges the field
+const RIPPLE_DECAY = 0.55; // s time-constant for the amplitude fading as it travels
+
 export default function SandTopography({
   className = "",
 }: {
@@ -52,6 +59,9 @@ export default function SandTopography({
     let my = 0;
     let targetAmp = 0;
     let amp = 0;
+
+    // click ripples: short-lived, so a plain array is fine — no pooling needed
+    let ripples: { x: number; y: number; t0: number }[] = [];
 
     function resize() {
       const rect = canvas!.getBoundingClientRect();
@@ -91,6 +101,17 @@ export default function SandTopography({
             const dx = px - mx;
             const dy = py - my;
             f += amp * Math.exp(-(dx * dx + dy * dy) / (2 * SIGMA * SIGMA));
+          }
+          for (let r = 0; r < ripples.length; r++) {
+            const rp = ripples[r];
+            const rdt = t - rp.t0;
+            if (rdt < 0 || rdt > RIPPLE_LIFE) continue;
+            const radius = rdt * RIPPLE_SPEED;
+            const dx = px - rp.x;
+            const dy = py - rp.y;
+            const dist = Math.sqrt(dx * dx + dy * dy) - radius;
+            const fade = Math.exp(-rdt / RIPPLE_DECAY);
+            f += RIPPLE_AMP * fade * Math.exp(-(dist * dist) / (2 * RIPPLE_WIDTH * RIPPLE_WIDTH));
           }
           grid[j * (cols + 1) + i] = f;
         }
@@ -220,6 +241,10 @@ export default function SandTopography({
         return;
       }
 
+      if (ripples.length) {
+        ripples = ripples.filter((r) => t - r.t0 <= RIPPLE_LIFE);
+      }
+
       // the mound trails the pointer, and settles slower than it presses
       mx = approach(mx, tx, FOLLOW_TAU, dt);
       my = approach(my, ty, FOLLOW_TAU, dt);
@@ -239,6 +264,9 @@ export default function SandTopography({
       tx = e.clientX - rect.left;
       ty = e.clientY - rect.top;
       targetAmp = AMP;
+      if (e.type === "pointerdown") {
+        ripples.push({ x: tx, y: ty, t0: (performance.now() - start) / 1000 });
+      }
     }
 
     function onLeave() {
