@@ -9,12 +9,12 @@ import { LogoMark } from "./Placeholders";
 // "Contact" isn't in this list — it already has its own CTA button (desktop)
 // and gets appended separately in the mobile menu below.
 const NAV = [
-  { label: "About", href: "#about" },
-  { label: "What we do", href: "#programs" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Projects", href: "#projects" },
-  { label: "Team", href: "#team" },
-  { label: "Sponsors", href: "#sponsors" },
+  { label: "About", href: "/#about" },
+  { label: "What we do", href: "/#programs" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Team", href: "/#team" },
+  { label: "Sponsors", href: "/#sponsors" },
 ];
 
 export default function SiteHeader() {
@@ -49,7 +49,7 @@ export default function SiteHeader() {
           }}
         >
           <div className="g-wrap grid grid-cols-[auto_1fr_auto] items-center gap-6 py-3 md:grid-cols-[1fr_auto_1fr]">
-            <a href="#top" className="flex items-center gap-2.5 justify-self-start" aria-label="Back to top">
+            <a href="/#top" className="flex items-center gap-2.5 justify-self-start" aria-label="Back to top">
               <LogoMark size={28} />
               <span className="g-label hidden sm:inline">Hack@Davidson</span>
             </a>
@@ -71,7 +71,7 @@ export default function SiteHeader() {
               <Link href="https://2027.hackatdavidson.com" className="g-btn g-btn-outline !px-4 !py-2.5">
                 2027
               </Link>
-              <a href="#contact" className="g-btn g-btn-solid !px-4 !py-2.5">
+              <a href="/#contact" className="g-btn g-btn-solid !px-4 !py-2.5">
                 Contact
               </a>
             </div>
@@ -94,7 +94,7 @@ export default function SiteHeader() {
               style={{ borderColor: "var(--g-rule)", background: "#fff" }}
             >
               <nav className="flex flex-col" aria-label="Mobile">
-                {[...NAV, { label: "Contact", href: "#contact" }].map((item) => (
+                {[...NAV, { label: "Contact", href: "/#contact" }].map((item) => (
                   <a
                     key={item.href}
                     href={item.href}

@@ -111,6 +111,7 @@ const MEMBERS: Member[] = [
     role: "Logistics",
     category: "logistics",
     linkedin: "https://www.linkedin.com/in/julia-gelina-86831a321/",
+    photo: "/assets/eboard/julia-gelina.jpg",
   },
   // Likely logistics, role still undecided
   {
@@ -133,37 +134,6 @@ const MEMBERS: Member[] = [
   },
 ];
 
-const CATEGORY_ORDER: Category[] = [
-  "president",
-  "advisor",
-  "operations",
-  "outreach",
-  "logistics",
-  "brand",
-];
-
-const CATEGORY_LABEL: Record<Category, string> = {
-  president: "Presidents",
-  advisor: "Advisors",
-  operations: "Operations",
-  outreach: "Outreach",
-  logistics: "Logistics",
-  brand: "Branding + Social",
-};
-
-function groupMembers(members: Member[]) {
-  const groups = CATEGORY_ORDER.map((category) => ({
-    label: CATEGORY_LABEL[category],
-    members: members.filter((m) => m.category === category),
-  })).filter((g) => g.members.length > 0);
-
-  const unassigned = members.filter((m) => !m.category);
-  if (unassigned.length > 0) {
-    groups.push({ label: "Joining soon", members: unassigned });
-  }
-  return groups;
-}
-
 export default function Eboard() {
   return (
     <section id="team" className="scroll-mt-20 bg-white">
@@ -172,78 +142,64 @@ export default function Eboard() {
           <h2 className="g-h2">Our team</h2>
         </Reveal>
 
-        <div className="mt-10 flex flex-col gap-10">
-          {groupMembers(MEMBERS).map((group, gi) => (
-            <div key={group.label}>
-              <Reveal y={14} delay={0.03 * gi}>
-                <span className="g-label" style={{ color: "var(--g-red)" }}>
-                  {group.label}
-                </span>
-              </Reveal>
-
-              <div className="mt-4 flex flex-wrap gap-5">
-                {group.members.map((m, i) => {
-                  const photo = m.photo ? (
-                    <div className="relative aspect-[4/5] overflow-hidden">
-                      <Image
-                        src={m.photo}
-                        alt={m.name}
-                        fill
-                        sizes="230px"
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        unoptimized
-                      />
-                    </div>
-                  ) : (
-                    <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
-                  );
-
-                  return (
-                    <Reveal key={m.name} y={16} delay={0.02 * i}>
-                      <div className="group w-[150px] sm:w-[230px]">
-                        <div className="relative overflow-hidden rounded-[var(--g-r-lg)]">
-                          {m.linkedin ? (
-                            <a
-                              href={m.linkedin}
-                              target="_blank"
-                              rel="noreferrer noopener"
-                              aria-label={`${m.name} on LinkedIn`}
-                              className="block"
-                            >
-                              {photo}
-                              <span
-                                aria-hidden
-                                className="absolute bottom-2 right-2 grid h-8 w-8 place-items-center rounded-full text-white shadow-md"
-                                style={{ background: "var(--g-red)" }}
-                              >
-                                <Icon icon="ph:linkedin-logo-bold" width="16" height="16" />
-                              </span>
-                            </a>
-                          ) : (
-                            photo
-                          )}
-                        </div>
-
-                        <h3 className="g-h3 mt-5 text-[0.98rem] leading-tight">
-                          {m.name}
-                        </h3>
-                        <p
-                          className="mt-1 text-[0.85rem] leading-snug"
-                          style={{
-                            color: m.role ? "var(--g-red)" : "var(--g-muted)",
-                            fontWeight: m.role ? 500 : 400,
-                            opacity: m.role ? 1 : 0.6,
-                          }}
-                        >
-                          {m.role ?? "Role TBD"}
-                        </p>
-                      </div>
-                    </Reveal>
-                  );
-                })}
+        <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-11 sm:mx-auto sm:max-w-[1000px] sm:grid-cols-4 sm:gap-x-6">
+          {MEMBERS.map((m, i) => {
+            const photo = m.photo ? (
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src={m.photo}
+                  alt={m.name}
+                  fill
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  unoptimized
+                />
               </div>
-            </div>
-          ))}
+            ) : (
+              <Frame ratio="4 / 5" icon="ph:user" className="!rounded-none" />
+            );
+
+            return (
+              <Reveal key={m.name} y={18} delay={0.02 * i}>
+                <div className="group">
+                  <div className="relative overflow-hidden rounded-[var(--g-r-lg)]">
+                    {m.linkedin ? (
+                      <a
+                        href={m.linkedin}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label={`${m.name} on LinkedIn`}
+                        className="block"
+                      >
+                        {photo}
+                        <span
+                          aria-hidden
+                          className="absolute bottom-2 right-2 grid h-8 w-8 place-items-center rounded-full text-white shadow-md"
+                          style={{ background: "var(--g-red)" }}
+                        >
+                          <Icon icon="ph:linkedin-logo-bold" width="16" height="16" />
+                        </span>
+                      </a>
+                    ) : (
+                      photo
+                    )}
+                  </div>
+
+                  <h3 className="g-h3 mt-5 text-[0.98rem] leading-tight">{m.name}</h3>
+                  <p
+                    className="mt-1 text-[0.85rem] leading-snug"
+                    style={{
+                      color: m.role ? "var(--g-red)" : "var(--g-muted)",
+                      fontWeight: m.role ? 500 : 400,
+                      opacity: m.role ? 1 : 0.6,
+                    }}
+                  >
+                    {m.role ?? "Role TBD"}
+                  </p>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
