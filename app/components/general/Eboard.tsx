@@ -62,6 +62,7 @@ const MEMBERS: Member[] = [
     role: "Secretary",
     category: "operations",
     linkedin: "https://www.linkedin.com/in/melissa-mugengano/",
+    photo: "/assets/eboard/melissa-mugengano.jpeg",
   },
   {
     name: "Arnav Biyani",
@@ -120,6 +121,7 @@ const MEMBERS: Member[] = [
     role: "Logistics",
     category: "logistics",
     linkedin: "https://www.linkedin.com/in/adolpho-ramirez/",
+    photo: "/assets/eboard/adolpho-ramirez.jpeg",
   },
   // Branding + Social Media
   {
@@ -127,6 +129,7 @@ const MEMBERS: Member[] = [
     role: "Branding Lead",
     category: "brand",
     linkedin: "https://www.linkedin.com/in/delila-cruz/",
+    photo: "/assets/eboard/delila-cruz.png",
   },
   {
     name: "Yahya Sheikh",
