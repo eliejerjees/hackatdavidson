@@ -90,6 +90,7 @@ const MEMBERS: Member[] = [
     role: "Outreach",
     category: "outreach",
     linkedin: "https://www.linkedin.com/in/jonathangarenas/",
+    photo: "/assets/eboard/jonathan-arenas.jpg",
   },
   {
     name: "Julia Holt",
@@ -116,6 +117,7 @@ const MEMBERS: Member[] = [
   // Likely logistics, role still undecided
   {
     name: "Adolpho Ramirez",
+    role: "Logistics",
     category: "logistics",
     linkedin: "https://www.linkedin.com/in/adolpho-ramirez/",
   },
@@ -131,6 +133,7 @@ const MEMBERS: Member[] = [
     role: "Social Media Chair",
     category: "brand",
     linkedin: "https://www.linkedin.com/in/yahya-sheikh-6ba6062a5/",
+    photo: "/assets/eboard/yahya-sheikh.jpeg",
   },
 ];
 
