@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Reveal from "../Reveal";
-import { Frame } from "./Placeholders";
 
 // The annual hackathon lives in the flagship block above, not here — this
 // grid is everything else, the ongoing programming. Rules and typography
@@ -19,7 +18,7 @@ const PROGRAMS = [
 export default function Programs() {
   return (
     <section id="programs" className="scroll-mt-20 bg-white">
-      <div className="g-wrap pt-16 lg:pt-20">
+      <div className="g-wrap pb-8 pt-16 lg:pb-10 lg:pt-20">
         <Reveal y={22}>
           <h2 className="g-h2">What do we do?</h2>
         </Reveal>
@@ -53,8 +52,16 @@ export default function Programs() {
                   Visit the event site
                 </Link>
               </div>
-              <div className="overflow-hidden rounded-[var(--g-r-lg)]">
-                <Frame dark ratio="16 / 10" icon="ph:confetti" />
+              <div
+                className="flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[var(--g-r-lg)] border"
+                style={{ borderColor: "rgba(255,255,255,.3)" }}
+              >
+                <span
+                  className="g-label"
+                  style={{ color: "rgba(255,255,255,.7)", letterSpacing: "0.2em" }}
+                >
+                  Coming soon
+                </span>
               </div>
             </div>
           </div>
