@@ -53,7 +53,6 @@ export default function About() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 priority
-                unoptimized
               />
             </div>
           </Reveal>

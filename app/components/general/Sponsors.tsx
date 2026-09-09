@@ -64,7 +64,6 @@ export default function Sponsors() {
                     fill
                     sizes="(max-width: 640px) 50vw, 25vw"
                     className="object-contain"
-                    unoptimized
                   />
                 </div>
               </div>

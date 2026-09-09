@@ -75,7 +75,6 @@ export default function Projects() {
                     fill
                     sizes="(max-width: 640px) 50vw, 25vw"
                     className="object-cover"
-                    unoptimized
                   />
                 </div>
                 <div className="p-4">

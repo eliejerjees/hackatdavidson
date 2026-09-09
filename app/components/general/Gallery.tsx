@@ -131,7 +131,6 @@ function Row({
                   fill
                   sizes="220px"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  unoptimized
                 />
                 <span
                   aria-hidden
@@ -226,7 +225,6 @@ function Lightbox({
           sizes="90vw"
           className="rounded-[var(--g-r-md)] object-contain"
           priority
-          unoptimized
         />
       </div>
 

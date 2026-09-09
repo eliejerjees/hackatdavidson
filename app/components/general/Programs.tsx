@@ -49,7 +49,7 @@ export default function Programs() {
                 >
                   48 hours every spring, our biggest event of the year.
                 </p>
-                <Link href="https://2027.hackatdavidson.com" className="g-btn g-btn-invert mt-8">
+                <Link href="/2027" className="g-btn g-btn-invert mt-8">
                   Visit the event site
                 </Link>
               </div>

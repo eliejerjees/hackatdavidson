@@ -68,7 +68,7 @@ export default function SiteHeader() {
             </nav>
 
             <div className="hidden items-center justify-self-end gap-2.5 md:flex">
-              <Link href="https://2027.hackatdavidson.com" className="g-btn g-btn-outline !px-4 !py-2.5">
+              <Link href="/2027" className="g-btn g-btn-outline !px-4 !py-2.5">
                 2027
               </Link>
               <a href="/#contact" className="g-btn g-btn-solid !px-4 !py-2.5">
@@ -106,7 +106,7 @@ export default function SiteHeader() {
                   </a>
                 ))}
                 <Link
-                  href="https://2027.hackatdavidson.com"
+                  href="/2027"
                   onClick={() => setOpen(false)}
                   className="g-label py-3.5"
                   style={{ color: "var(--g-red)" }}

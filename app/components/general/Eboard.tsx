@@ -24,7 +24,7 @@ const MEMBERS: Member[] = [
     role: "Co-President",
     category: "president",
     linkedin: "https://www.linkedin.com/in/eliejerjees/",
-    photo: "/assets/eboard/elie-jerjees.png",
+    photo: "/assets/eboard/elie-jerjees.jpg",
   },
   {
     name: "Tanaka Makoni",
@@ -46,7 +46,7 @@ const MEMBERS: Member[] = [
     role: "Advisor",
     category: "advisor",
     linkedin: "https://www.linkedin.com/in/gobaheti/",
-    photo: "/assets/eboard/funny/goatpesh.jpg",
+    photo: "/assets/eboard/gopesh-baheti.jpg",
   },
   {
     name: "Murtaza Nikzad",
@@ -158,7 +158,6 @@ export default function Eboard() {
                   fill
                   sizes="(max-width: 640px) 50vw, 25vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  unoptimized
                 />
               </div>
             ) : (

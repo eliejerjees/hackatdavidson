@@ -228,7 +228,6 @@ export default function SponsorPage() {
                   fill
                   sizes="100vw"
                   className="object-cover"
-                  unoptimized
                 />
               </div>
             </Reveal>
@@ -311,7 +310,6 @@ export default function SponsorPage() {
                   fill
                   sizes="100vw"
                   className="object-cover object-top"
-                  unoptimized
                 />
               </div>
             </Reveal>
