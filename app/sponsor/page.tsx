@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import SiteHeader from "../components/general/SiteHeader";
@@ -61,6 +62,54 @@ const REASONS = [
     label: "Special benefits",
     line: "Judge nominations and other perks reserved for our top-tier partners.",
   },
+];
+
+const GIFT_FORM_URL = "https://community.davidson.edu/gift-form";
+
+// Verbatim from the Davidson online giving instructions — the fund name has to
+// be typed exactly for the gift to reach us.
+const DONATE_STEPS: { id: string; body: ReactNode }[] = [
+  {
+    id: "form",
+    body: (
+      <>
+        Go to{" "}
+        <a
+          href={GIFT_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold underline decoration-2 underline-offset-[3px]"
+          style={{ color: "var(--g-red)" }}
+        >
+          community.davidson.edu/gift-form
+        </a>
+        .
+      </>
+    ),
+  },
+  {
+    id: "fund",
+    body: (
+      <>
+        Select <strong style={{ color: "var(--g-ink)" }}>&ldquo;Other&rdquo;</strong> and type in{" "}
+        <strong style={{ color: "var(--g-ink)" }}>
+          &ldquo;Student Activities Office &ndash; Hack@Davidson&rdquo;
+        </strong>
+        .
+      </>
+    ),
+  },
+  {
+    id: "amount",
+    body: (
+      <>
+        Add to cart and enter the amount &mdash; e.g.{" "}
+        <strong style={{ color: "var(--g-ink)" }}>$1,000</strong> for Bronze.
+      </>
+    ),
+  },
+  { id: "affiliation", body: <>Select your affiliation, and continue.</> },
+  { id: "checkout", body: <>Check out.</> },
 ];
 
 const PERKS = [
@@ -299,6 +348,81 @@ export default function SponsorPage() {
           </div>
         </section>
 
+        {/* --- Donate online --- */}
+        <section id="donate" className="scroll-mt-20 bg-white">
+          <div className="g-wrap pb-16 lg:pb-20">
+            <div
+              className="grid items-start gap-12 rounded-[var(--g-r-lg)] border p-8 lg:grid-cols-[1fr_1fr] lg:gap-16 lg:p-12"
+              style={{ borderColor: "var(--g-rule)" }}
+            >
+              <Reveal y={22}>
+                <span className="g-label" style={{ color: "var(--g-red)" }}>
+                  Give online
+                </span>
+                <h2 className="g-h2 mt-3 max-w-[14ch]">Donate through Davidson</h2>
+                <p className="g-lead mt-5 max-w-[42ch]">
+                  Sponsorships run through Davidson College&apos;s secure giving
+                  form, so your gift lands directly in the Student Activities
+                  Office fund behind Hack@Davidson.
+                </p>
+                <a
+                  href={GIFT_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="g-btn g-btn-solid mt-8"
+                >
+                  Open the gift form
+                  <Icon icon="ph:arrow-up-right-bold" width="14" height="14" aria-hidden />
+                </a>
+              </Reveal>
+
+              <Reveal y={22} delay={0.06}>
+                <ol className="border-t" style={{ borderColor: "var(--g-rule)" }}>
+                  {DONATE_STEPS.map((step, i) => (
+                    <li
+                      key={step.id}
+                      className="flex items-start gap-4 border-b py-4"
+                      style={{ borderColor: "var(--g-rule)" }}
+                    >
+                      <span
+                        className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-[0.78rem] font-bold"
+                        style={{ background: "var(--g-red-soft)", color: "var(--g-red)" }}
+                      >
+                        {i + 1}
+                      </span>
+                      <span
+                        className="pt-0.5 text-[0.95rem] leading-snug"
+                        style={{ color: "var(--g-muted)" }}
+                      >
+                        {step.body}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+                <p className="mt-5 text-[0.85rem]" style={{ color: "var(--g-muted)" }}>
+                  Questions about the form, or need an invoice instead? Email{" "}
+                  <a
+                    href="mailto:tamakoni@davidson.edu"
+                    className="font-semibold underline decoration-2 underline-offset-[3px]"
+                    style={{ color: "var(--g-red)" }}
+                  >
+                    tamakoni@davidson.edu
+                  </a>{" "}
+                  or{" "}
+                  <a
+                    href="mailto:eljerjees@davidson.edu"
+                    className="font-semibold underline decoration-2 underline-offset-[3px]"
+                    style={{ color: "var(--g-red)" }}
+                  >
+                    eljerjees@davidson.edu
+                  </a>
+                  .
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
         {/* --- Photo break --- */}
         <section className="bg-white">
           <div className="g-wrap pb-16 lg:pb-20">
@@ -374,6 +498,16 @@ export default function SponsorPage() {
               >
                 hack@davidson.edu
               </a>
+              <p className="mt-6 text-[0.9rem] text-white/80">
+                Or{" "}
+                <a
+                  href="#donate"
+                  className="font-semibold text-white underline decoration-2 underline-offset-[5px]"
+                >
+                  donate online through Davidson
+                </a>
+                .
+              </p>
             </Reveal>
           </div>
         </section>
