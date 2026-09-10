@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Hack@Davidson",
     short_name: "Hack@Davidson",
     description:
-      "Davidson College's student-run tech club — annual hackathon, workshops, and build nights.",
+      "Davidson College's student-run tech club: annual hackathon, workshops, and build nights.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

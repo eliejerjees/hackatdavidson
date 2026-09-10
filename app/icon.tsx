@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { loadGoogleFont } from "./og-shared";
+import { AT_MARK_WHITE } from "./og-shared";
 
 // Modern icon.tsx convention — browsers prefer this over favicon.ico when
 // both exist. Same "@" mark as favicon.ico (regenerate both together;
@@ -7,9 +7,7 @@ import { loadGoogleFont } from "./og-shared";
 export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
-export default async function Icon() {
-  const archivoBlack = await loadGoogleFont("Archivo", 900, "@");
-
+export default function Icon() {
   return new ImageResponse(
     (
       <div
@@ -22,18 +20,10 @@ export default async function Icon() {
           background: "#d42121",
         }}
       >
-        <span
-          style={{
-            fontFamily: "Archivo",
-            fontWeight: 900,
-            fontSize: 44,
-            color: "#ffffff",
-          }}
-        >
-          @
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={AT_MARK_WHITE} width={44} height={44} />
       </div>
     ),
-    { ...size, fonts: [{ name: "Archivo", data: archivoBlack, weight: 900, style: "normal" }] },
+    size,
   );
 }

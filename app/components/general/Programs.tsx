@@ -47,7 +47,7 @@ export default function Programs() {
                   className="mt-4 max-w-[38ch] text-[0.95rem] leading-snug"
                   style={{ color: "rgba(255,255,255,.8)" }}
                 >
-                  48 hours last February — here&apos;s a look back at our
+                  48 hours last February, here&apos;s a look back at our
                   biggest event of the year.
                 </p>
                 <Link href="https://2026.hackatdavidson.com" className="g-btn g-btn-invert mt-8">

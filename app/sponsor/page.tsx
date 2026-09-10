@@ -191,10 +191,19 @@ export default function SponsorPage() {
 
           <Link
             href="/"
-            aria-label="Back to home"
+            aria-label="Hack@Davidson"
             className="absolute left-6 top-7 z-10 flex items-center sm:left-10 sm:top-7"
           >
             <Icon icon="ph:at-bold" width="30" height="30" style={{ color: "#ffffff" }} aria-hidden />
+          </Link>
+
+          <Link
+            href="/"
+            className="absolute right-6 top-7 z-10 flex items-center gap-1.5 text-[0.95rem] font-semibold transition-opacity hover:opacity-80 sm:right-10 sm:top-7"
+            style={{ color: "#ffffff" }}
+          >
+            <Icon icon="ph:arrow-left-bold" width="16" height="16" aria-hidden />
+            Back to home
           </Link>
 
           <div className="g-wrap relative z-10">
@@ -212,7 +221,7 @@ export default function SponsorPage() {
                 Davidson College&apos;s largest student-run tech club runs the
                 college&apos;s annual hackathon, plus workshops and build
                 nights all year. Hack@Davidson 2027 is our next hackathon,
-                coming this February — and a direct line to the students
+                coming this February, and a direct line to the students
                 you&apos;ll want on your team before they&apos;re on the job
                 market.
               </p>
@@ -350,7 +359,7 @@ export default function SponsorPage() {
                   How to sponsor us
                 </h2>
                 <p className="g-lead mt-5 max-w-[42ch]">
-                  There&apos;s no invoice or contract to sign — every package
+                  There&apos;s no invoice or contract to sign; every package
                   above is paid through Davidson College&apos;s secure giving
                   form, so your sponsorship lands directly in the Student
                   Activities Office fund behind Hack@Davidson.

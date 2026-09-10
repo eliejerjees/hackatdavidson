@@ -5,6 +5,19 @@ import { ImageResponse } from "next/og";
 
 export const OG_SIZE = { width: 1200, height: 630 };
 
+// Same "at" mark used on-page (Phosphor's ph:at-bold), so the favicon/OG
+// image match the real logo instead of a plain text "@". Swap this path
+// (and the on-page <Icon icon="ph:at-bold" />) for the real logo later.
+const AT_PATH =
+  "M128 20a108 108 0 0 0 0 216c22.27 0 45.69-6.73 62.64-18a12 12 0 1 0-13.29-20c-13 8.63-31.89 14-49.35 14a84 84 0 1 1 84-84c0 9.29-1.67 17.08-4.69 21.95c-2.64 4.24-6 6.05-11.31 6.05s-8.67-1.81-11.31-6.05c-3-4.87-4.69-12.66-4.69-21.95V88a12 12 0 0 0-23.49-3.46a52 52 0 1 0 8.86 79.57C172.3 174.3 182.81 180 196 180c24.67 0 40-19.92 40-52A108.12 108.12 0 0 0 128 20m0 136a28 28 0 1 1 28-28a28 28 0 0 1-28 28";
+
+function atMarkSrc(color: string) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="${color}" d="${AT_PATH}"/></svg>`;
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+
+export const AT_MARK_WHITE = atMarkSrc("white");
+
 /**
  * Fetches a Google Font as raw TrueType bytes for use with ImageResponse.
  * Requesting without a browser-like user agent makes Google's CSS endpoint
@@ -78,23 +91,13 @@ export async function renderOgImage() {
           />
         ))}
 
-        <div
-          style={{
-            position: "absolute",
-            top: 56,
-            left: 64,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 68,
-            height: 68,
-            border: "3px solid rgba(255,255,255,0.85)",
-          }}
-        >
-          <span style={{ fontFamily: "Archivo", fontWeight: 900, fontSize: 36, color: "#ffffff" }}>
-            @
-          </span>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={AT_MARK_WHITE}
+          width={64}
+          height={64}
+          style={{ position: "absolute", top: 56, left: 64 }}
+        />
 
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <span

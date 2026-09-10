@@ -225,6 +225,10 @@ export default function Hero() {
             </a>
           ))}
         </div>
+
+        <Link href="/sponsor" className="g-btn g-btn-invert mt-6 !px-5 !py-2.5">
+          Become a sponsor
+        </Link>
       </motion.div>
 
       <span
