@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import {
   Archivo,
   Geist_Mono,
@@ -53,7 +54,10 @@ export default function RootLayout({
       {/* suppressHydrationWarning: browser extensions (Grammarly, etc.)
           inject attributes onto <body> after the SSR'd HTML is sent —
           harmless, but React would otherwise flag it as a mismatch. */}
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
