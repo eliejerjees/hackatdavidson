@@ -40,7 +40,7 @@ const SOCIALS = [
   {
     icon: "ph:discord-logo-bold",
     label: "Discord",
-    href: "https://discord.com/invite/jvaPqNssAa",
+    href: "https://discord.gg/G9unHpAHSS",
   },
   {
     icon: "ph:trophy-bold",
@@ -135,12 +135,7 @@ export default function Hero() {
       >
         <a href="#top" aria-label="Hack@Davidson" className="flex items-center">
           {/* Placeholder symbol mark. Swap for the real one. */}
-          <span
-            className="grid h-10 w-10 place-items-center border-2 font-[family-name:var(--font-archivo)] text-[0.72rem] font-black text-white"
-            style={{ borderColor: "rgba(255,255,255,.7)" }}
-          >
-            H@D
-          </span>
+          <Icon icon="ph:at-bold" width="30" height="30" style={{ color: "#ffffff" }} aria-hidden />
         </a>
         <div className="flex items-center gap-6 sm:gap-8">
           {NAV.map((n) => (

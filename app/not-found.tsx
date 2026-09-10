@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import SandTopography from "./components/general/SandTopography";
 
 export const metadata: Metadata = {
@@ -31,12 +32,7 @@ export default function NotFound() {
           aria-label="Hack@Davidson"
           className="absolute left-6 top-7 z-10 flex items-center sm:left-10 sm:top-7"
         >
-          <span
-            className="grid h-10 w-10 place-items-center border-2 font-[family-name:var(--font-archivo)] text-[0.72rem] font-black text-white"
-            style={{ borderColor: "rgba(255,255,255,.7)" }}
-          >
-            H@D
-          </span>
+          <Icon icon="ph:at-bold" width="30" height="30" style={{ color: "#ffffff" }} aria-hidden />
         </Link>
 
         <div className="relative z-10">

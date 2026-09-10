@@ -18,7 +18,7 @@ const SOCIALS = [
   {
     icon: "ph:discord-logo-bold",
     label: "Discord",
-    href: "https://discord.com/invite/jvaPqNssAa",
+    href: "https://discord.gg/G9unHpAHSS",
   },
   {
     icon: "ph:trophy-bold",

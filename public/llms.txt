@@ -1,0 +1,13 @@
+# Hack@Davidson
+
+> Hack@Davidson is a student-run organization at Davidson College building a community of makers across every major. The club runs Davidson's annual hackathon, plus workshops, build nights, and tech talks all year, and is free and open to any Davidson student.
+
+## Pages
+
+- [Home](https://hackatdavidson.com/): About the club, programs, gallery, projects built by members, team, and sponsors.
+- [Sponsor Hack@Davidson](https://hackatdavidson.com/sponsor): Sponsorship tiers, benefits, and how to fund the hackathon through Davidson College's giving form.
+
+## Notes
+
+- The next hackathon, Hack@Davidson 2027, is planned for February 2027; exact dates are not yet set.
+- Contact: hack@davidson.edu

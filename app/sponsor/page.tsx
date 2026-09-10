@@ -194,12 +194,7 @@ export default function SponsorPage() {
             aria-label="Back to home"
             className="absolute left-6 top-7 z-10 flex items-center sm:left-10 sm:top-7"
           >
-            <span
-              className="grid h-10 w-10 place-items-center border-2 font-[family-name:var(--font-archivo)] text-[0.72rem] font-black text-white"
-              style={{ borderColor: "rgba(255,255,255,.7)" }}
-            >
-              H@D
-            </span>
+            <Icon icon="ph:at-bold" width="30" height="30" style={{ color: "#ffffff" }} aria-hidden />
           </Link>
 
           <div className="g-wrap relative z-10">

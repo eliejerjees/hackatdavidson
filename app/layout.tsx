@@ -35,10 +35,27 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const TITLE = "Hack@Davidson: Davidson College's student tech community";
+const DESCRIPTION =
+  "Hack@Davidson is a student-run organization at Davidson College building a community of makers across every major. We run Davidson's annual hackathon, workshops, build nights, and tech talks.";
+
 export const metadata: Metadata = {
-  title: "Hack@Davidson: Davidson College's student tech community",
-  description:
-    "Hack@Davidson is a student-run organization at Davidson College building a community of makers across every major. We run Davidson's annual hackathon, workshops, build nights, and tech talks.",
+  metadataBase: new URL("https://hackatdavidson.com"),
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "https://hackatdavidson.com",
+    siteName: "Hack@Davidson",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

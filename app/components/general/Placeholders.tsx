@@ -44,7 +44,10 @@ export function Frame({
   );
 }
 
-/** Placeholder wordmark. Swap for the real logo file once it exists. */
+/**
+ * Placeholder logo — a stylized "@" mark. Red on light backgrounds, white
+ * on dark ones (invert). Swap for the real logo once it exists.
+ */
 export function LogoMark({
   size = 36,
   invert = false,
@@ -53,20 +56,13 @@ export function LogoMark({
   invert?: boolean;
 }) {
   return (
-    <span
+    <Icon
+      icon="ph:at-bold"
       aria-hidden
-      className="grid shrink-0 place-items-center rounded-[9px] font-[family-name:var(--font-archivo)] font-black leading-none"
-      style={{
-        width: size,
-        height: size,
-        fontSize: size * 0.36,
-        background: invert ? "#ffffff" : "var(--g-red, #d42121)",
-        color: invert ? "var(--g-red, #d42121)" : "#ffffff",
-        letterSpacing: "-0.02em",
-      }}
-    >
-      H@D
-    </span>
+      width={size}
+      height={size}
+      style={{ color: invert ? "#ffffff" : "var(--g-red, #d42121)", flexShrink: 0 }}
+    />
   );
 }
 
