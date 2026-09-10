@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import SandTopography from "../components/general/SandTopography";
 
 export const metadata: Metadata = {
-  title: "Hack@Davidson 2027: Coming soon",
+  title: "2027: Coming soon",
 };
 
 export default function Coming2027() {

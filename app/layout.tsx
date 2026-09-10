@@ -35,16 +35,19 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const TITLE = "Hack@Davidson: Davidson College's student tech community";
+// Short form for the browser tab; the fuller line still carries the social
+// card title/description, where there's room for it.
+const TITLE = "Hack@Davidson";
+const SOCIAL_TITLE = "Hack@Davidson: Davidson College's student tech community";
 const DESCRIPTION =
   "Hack@Davidson is a student-run organization at Davidson College building a community of makers across every major. We run Davidson's annual hackathon, workshops, build nights, and tech talks.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hackatdavidson.com"),
-  title: TITLE,
+  title: { default: TITLE, template: "%s | Hack@Davidson" },
   description: DESCRIPTION,
   openGraph: {
-    title: TITLE,
+    title: SOCIAL_TITLE,
     description: DESCRIPTION,
     url: "https://hackatdavidson.com",
     siteName: "Hack@Davidson",
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: TITLE,
+    title: SOCIAL_TITLE,
     description: DESCRIPTION,
   },
 };

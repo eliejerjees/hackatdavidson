@@ -17,6 +17,7 @@ function atMarkSrc(color: string) {
 }
 
 export const AT_MARK_WHITE = atMarkSrc("white");
+export const AT_MARK_RED = atMarkSrc("#d42121");
 
 /**
  * Fetches a Google Font as raw TrueType bytes for use with ImageResponse.

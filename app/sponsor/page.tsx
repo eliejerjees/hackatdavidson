@@ -9,7 +9,7 @@ import SandTopography from "../components/general/SandTopography";
 import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Sponsor Hack@Davidson",
+  title: "Sponsor",
   description:
     "Partner with Hack@Davidson, Davidson College's largest student-run tech club. See our sponsorship packages and benefits for Hack@Davidson 2027.",
 };
