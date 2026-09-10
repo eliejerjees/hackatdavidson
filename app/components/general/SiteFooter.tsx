@@ -25,6 +25,11 @@ const SOCIALS = [
     label: "Devpost project gallery",
     href: "https://hack-davidson.devpost.com/project-gallery",
   },
+  {
+    icon: "ph:envelope-simple-bold",
+    label: "Email",
+    href: "mailto:hack@davidson.edu",
+  },
 ];
 
 export default function SiteFooter() {
@@ -49,8 +54,8 @@ export default function SiteFooter() {
               <a
                 key={s.label}
                 href={s.href}
-                target="_blank"
-                rel="noreferrer noopener"
+                target={s.href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={s.href.startsWith("mailto:") ? undefined : "noreferrer noopener"}
                 aria-label={s.label}
                 className="grid h-9 w-9 place-items-center rounded-full border text-white transition-colors hover:bg-white hover:text-[color:var(--g-ink)]"
                 style={{ borderColor: "rgba(255,255,255,.26)" }}

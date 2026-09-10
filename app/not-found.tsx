@@ -26,7 +26,7 @@ export default function NotFound() {
           }}
         />
 
-        <a
+        <Link
           href="/"
           aria-label="Hack@Davidson"
           className="absolute left-6 top-7 z-10 flex items-center sm:left-10 sm:top-7"
@@ -37,7 +37,7 @@ export default function NotFound() {
           >
             H@D
           </span>
-        </a>
+        </Link>
 
         <div className="relative z-10">
           <h1

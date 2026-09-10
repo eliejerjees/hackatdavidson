@@ -6,8 +6,8 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { LogoMark } from "./Placeholders";
 
-// "Contact" isn't in this list — it already has its own CTA button (desktop)
-// and gets appended separately in the mobile menu below.
+// "Become a sponsor" isn't in this list — it already has its own CTA button
+// (desktop) and gets appended separately in the mobile menu below.
 const NAV = [
   { label: "About", href: "/#about" },
   { label: "What we do", href: "/#programs" },
@@ -49,10 +49,10 @@ export default function SiteHeader() {
           }}
         >
           <div className="g-wrap grid grid-cols-[auto_1fr_auto] items-center gap-6 py-3 md:grid-cols-[1fr_auto_1fr]">
-            <a href="/#top" className="flex items-center gap-2.5 justify-self-start" aria-label="Back to top">
+            <Link href="/#top" className="flex items-center gap-2.5 justify-self-start" aria-label="Back to top">
               <LogoMark size={28} />
               <span className="g-label hidden sm:inline">Hack@Davidson</span>
-            </a>
+            </Link>
 
             <nav className="hidden items-center gap-5 md:flex" aria-label="Main">
               {NAV.map((item) => (
@@ -71,9 +71,9 @@ export default function SiteHeader() {
               <Link href="/2027" className="g-btn g-btn-outline !px-4 !py-2.5">
                 2027
               </Link>
-              <a href="/#contact" className="g-btn g-btn-solid !px-4 !py-2.5">
-                Contact
-              </a>
+              <Link href="/sponsor" className="g-btn g-btn-solid !px-4 !py-2.5">
+                Become a sponsor
+              </Link>
             </div>
 
             <button
@@ -94,7 +94,7 @@ export default function SiteHeader() {
               style={{ borderColor: "var(--g-rule)", background: "#fff" }}
             >
               <nav className="flex flex-col" aria-label="Mobile">
-                {[...NAV, { label: "Contact", href: "/#contact" }].map((item) => (
+                {[...NAV, { label: "Become a sponsor", href: "/sponsor" }].map((item) => (
                   <a
                     key={item.href}
                     href={item.href}

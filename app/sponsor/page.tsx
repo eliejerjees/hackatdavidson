@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import SiteHeader from "../components/general/SiteHeader";
 import SiteFooter from "../components/general/SiteFooter";
@@ -19,7 +20,6 @@ const TIERS = [
   {
     name: "Bronze",
     price: "$1,000",
-    solid: false,
     benefits: [
       "Logo placement on our website",
       "A shout-out on our social media",
@@ -29,13 +29,11 @@ const TIERS = [
   {
     name: "Silver",
     price: "$3,000",
-    solid: false,
     benefits: ["Premium booth space at the event", "Logo on the event banner"],
   },
   {
     name: "Gold",
     price: "$10,000",
-    solid: true,
     benefits: [
       "A keynote speaking opportunity",
       "Prominent logo placement throughout the venue and materials",
@@ -191,6 +189,19 @@ export default function SponsorPage() {
             }}
           />
 
+          <Link
+            href="/"
+            aria-label="Back to home"
+            className="absolute left-6 top-7 z-10 flex items-center sm:left-10 sm:top-7"
+          >
+            <span
+              className="grid h-10 w-10 place-items-center border-2 font-[family-name:var(--font-archivo)] text-[0.72rem] font-black text-white"
+              style={{ borderColor: "rgba(255,255,255,.7)" }}
+            >
+              H@D
+            </span>
+          </Link>
+
           <div className="g-wrap relative z-10">
             <Reveal y={22}>
               <span className="g-label" style={{ color: "rgba(255,255,255,.7)" }}>
@@ -210,15 +221,9 @@ export default function SponsorPage() {
                 you&apos;ll want on your team before they&apos;re on the job
                 market.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-6">
-                <a href="mailto:hack@davidson.edu" className="g-btn g-btn-invert">
+              <div className="mt-8">
+                <a href="#tiers" className="g-btn g-btn-invert">
                   Become a sponsor
-                </a>
-                <a
-                  href="#tiers"
-                  className="text-[0.95rem] font-semibold text-white underline decoration-2 underline-offset-[6px]"
-                >
-                  See packages
                 </a>
               </div>
             </Reveal>
@@ -283,7 +288,7 @@ export default function SponsorPage() {
           </div>
         </section>
 
-        {/* --- Tiers --- */}
+        {/* --- Tiers + how to give, together: see the packages, then act --- */}
         <section id="tiers" className="scroll-mt-20 bg-white">
           <div className="g-wrap pb-16 lg:pb-20">
             <Reveal y={22}>
@@ -294,13 +299,14 @@ export default function SponsorPage() {
             </Reveal>
 
             <div
-              className="mt-10 grid grid-cols-1 border-l border-t sm:grid-cols-3"
+              className="mt-10 overflow-hidden rounded-[var(--g-r-lg)] border"
               style={{ borderColor: "var(--g-rule)" }}
             >
+              <div className="grid grid-cols-1 sm:grid-cols-3">
               {TIERS.map((tier, i) => (
                 <Reveal key={tier.name} y={20} delay={0.05 * i}>
                   <div
-                    className="flex h-full flex-col border-b border-r p-7 lg:p-9"
+                    className={`flex h-full flex-col border-b p-7 lg:p-9 ${i < TIERS.length - 1 ? "sm:border-r" : ""}`}
                     style={{ borderColor: "var(--g-rule)" }}
                   >
                     <span className="g-label" style={{ color: "var(--g-taupe)" }}>
@@ -332,38 +338,27 @@ export default function SponsorPage() {
                         </li>
                       ))}
                     </ul>
-
-                    <a
-                      href={`mailto:hack@davidson.edu?subject=${encodeURIComponent(
-                        `Hack@Davidson ${tier.name} sponsorship`,
-                      )}`}
-                      className={`g-btn mt-8 ${tier.solid ? "g-btn-solid" : "g-btn-outline"}`}
-                    >
-                      Choose {tier.name}
-                    </a>
                   </div>
                 </Reveal>
               ))}
-            </div>
-          </div>
-        </section>
+              </div>
 
-        {/* --- Donate online --- */}
-        <section id="donate" className="scroll-mt-20 bg-white">
-          <div className="g-wrap pb-16 lg:pb-20">
-            <div
-              className="grid items-start gap-12 rounded-[var(--g-r-lg)] border p-8 lg:grid-cols-[1fr_1fr] lg:gap-16 lg:p-12"
-              style={{ borderColor: "var(--g-rule)" }}
-            >
+              <div
+                id="donate"
+                className="grid scroll-mt-20 items-start gap-12 p-8 lg:grid-cols-[1fr_1fr] lg:gap-16 lg:p-12"
+              >
               <Reveal y={22}>
                 <span className="g-label" style={{ color: "var(--g-red)" }}>
-                  Give online
+                  How to pay
                 </span>
-                <h2 className="g-h2 mt-3 max-w-[14ch]">Donate through Davidson</h2>
+                <h2 className="g-h2 mt-3 max-w-[16ch]">
+                  How to sponsor us
+                </h2>
                 <p className="g-lead mt-5 max-w-[42ch]">
-                  Sponsorships run through Davidson College&apos;s secure giving
-                  form, so your gift lands directly in the Student Activities
-                  Office fund behind Hack@Davidson.
+                  There&apos;s no invoice or contract to sign — every package
+                  above is paid through Davidson College&apos;s secure giving
+                  form, so your sponsorship lands directly in the Student
+                  Activities Office fund behind Hack@Davidson.
                 </p>
                 <a
                   href={GIFT_FORM_URL}
@@ -377,7 +372,7 @@ export default function SponsorPage() {
               </Reveal>
 
               <Reveal y={22} delay={0.06}>
-                <ol className="border-t" style={{ borderColor: "var(--g-rule)" }}>
+                <ol>
                   {DONATE_STEPS.map((step, i) => (
                     <li
                       key={step.id}
@@ -402,23 +397,16 @@ export default function SponsorPage() {
                 <p className="mt-5 text-[0.85rem]" style={{ color: "var(--g-muted)" }}>
                   Questions about the form, or need an invoice instead? Email{" "}
                   <a
-                    href="mailto:tamakoni@davidson.edu"
+                    href="mailto:hack@davidson.edu"
                     className="font-semibold underline decoration-2 underline-offset-[3px]"
                     style={{ color: "var(--g-red)" }}
                   >
-                    tamakoni@davidson.edu
-                  </a>{" "}
-                  or{" "}
-                  <a
-                    href="mailto:eljerjees@davidson.edu"
-                    className="font-semibold underline decoration-2 underline-offset-[3px]"
-                    style={{ color: "var(--g-red)" }}
-                  >
-                    eljerjees@davidson.edu
+                    hack@davidson.edu
                   </a>
                   .
                 </p>
               </Reveal>
+              </div>
             </div>
           </div>
         </section>
@@ -490,7 +478,8 @@ export default function SponsorPage() {
                 Let&apos;s build Hack@Davidson together.
               </h2>
               <p className="mt-5 text-[1.05rem] text-white/80">
-                Reach out and we&apos;ll help you find the right package.
+                Ready to pay? Every package is funded through Davidson&apos;s
+                giving form above. Have questions first, or need an invoice?
               </p>
               <a
                 href="mailto:hack@davidson.edu"
@@ -504,7 +493,7 @@ export default function SponsorPage() {
                   href="#donate"
                   className="font-semibold text-white underline decoration-2 underline-offset-[5px]"
                 >
-                  donate online through Davidson
+                  jump straight to the giving form
                 </a>
                 .
               </p>
