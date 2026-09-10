@@ -40,11 +40,11 @@ export default function SiteFooter() {
           <LogoMark size={30} invert />
           <span className="g-label text-white">Hack@Davidson</span>
           <Link
-            href="/2027"
+            href="https://2026.hackatdavidson.com"
             className="g-label ml-3 hidden sm:inline"
             style={{ color: "rgba(255,255,255,.55)" }}
           >
-            2027
+            2026
           </Link>
         </div>
 

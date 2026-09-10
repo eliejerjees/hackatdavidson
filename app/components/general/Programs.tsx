@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "../Reveal";
 
 // The annual hackathon lives in the flagship block above, not here — this
@@ -32,7 +33,7 @@ export default function Programs() {
             <div className="grid items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
               <div>
                 <span className="g-label" style={{ color: "rgba(255,255,255,.7)" }}>
-                  Flagship event
+                  Last year&apos;s event
                 </span>
                 <h3
                   className="mt-4 font-[family-name:var(--font-archivo)] font-black uppercase leading-[0.88] tracking-[-0.03em] text-white"
@@ -40,28 +41,27 @@ export default function Programs() {
                 >
                   Hack<span style={{ color: "var(--g-sand)" }}>@</span>Davidson
                   <br />
-                  2027
+                  2026
                 </h3>
                 <p
                   className="mt-4 max-w-[38ch] text-[0.95rem] leading-snug"
                   style={{ color: "rgba(255,255,255,.8)" }}
                 >
-                  48 hours every spring, our biggest event of the year.
+                  48 hours last February — here&apos;s a look back at our
+                  biggest event of the year.
                 </p>
-                <Link href="/2027" className="g-btn g-btn-invert mt-8">
+                <Link href="https://2026.hackatdavidson.com" className="g-btn g-btn-invert mt-8">
                   Visit the event site
                 </Link>
               </div>
-              <div
-                className="flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[var(--g-r-lg)] border"
-                style={{ borderColor: "rgba(255,255,255,.3)" }}
-              >
-                <span
-                  className="g-label"
-                  style={{ color: "rgba(255,255,255,.7)", letterSpacing: "0.2em" }}
-                >
-                  Coming soon
-                </span>
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[var(--g-r-lg)]">
+                <Image
+                  src="/assets/gallery/07.jpg"
+                  alt="A team celebrating after winning an award"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
